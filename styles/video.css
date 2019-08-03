@@ -53,7 +53,7 @@
     height: 15vw;
     width: 100%;
     display: grid;
-    grid-template-columns: [col-1] 1vw [col-2] 28vw [col-3] 60px [col-4] 25vw [col-5] auto [end];
+    grid-template-columns: [col-1] 1vw [col-2] 28vw [col-3] 3.7vw [col-4] 25vw [col-5] auto [end];
     grid-template-rows: [row-1] 0vw [row-2] 14vw [row-3] auto [end];
 }
 
@@ -71,7 +71,7 @@
     height: 20vw;
     width: 100%;
     display: grid;
-    grid-template-columns: [col-1] auto [col-2] 25vw [col-3] 60px [col-4] 28vw [col-5] 1vw [end];
+    grid-template-columns: [col-1] auto [col-2] 25vw [col-3] 3.7vw [col-4] 28vw [col-5] 1vw [end];
     grid-template-rows: [row-1] 4vw [row-2] 14vw [row-3] auto [end];
 }
 
@@ -89,7 +89,7 @@
     grid-column-end: col-5;
     grid-row-start: row-2;
     grid-row-end: row-3;
-    text-align: left;
+    text-align: center;
 }
 
 .cards-container .cards-right .info{
@@ -97,23 +97,47 @@
     grid-column-end: col-3;
     grid-row-start: row-2;
     grid-row-end: row-3;
-    text-align: right;
+    text-align: center;
 }
 .cards-container .info{
     display: inline-block;
     font-family: "sf-ui";
-    font-size: 20px;
+    font-size: 1.240vw;
     color: white;
     font-weight: 100;
     /* overflow: scroll; */
 }
+/* .cards-container .cards-left .info{
+    display: grid;
+    grid-template-columns: [c-1] 40px [c-2] auto; 
+    grid-template-rows: [r-1] 40px [r-2] auto [end];
+}
+.cards-container .cards-right .info{
+    display: grid;
+    grid-template-columns: [c-1] auto [c-2] 40px; 
+    grid-template-rows: [r-1] 40px [r-2] auto [end];   
+} */
 .cards-container .info-heading{
     color: red;
-    width: fit-content;
-    font-size: 33px;
+    width: 100%;
+    font-size: 2.047vw;
     margin-top: 30px;
     margin-bottom: 15px;
     padding-bottom: 5px;
     border-bottom: 1px solid red;
     letter-spacing: 3.18px;
 }
+/* .cards-container .cards-left .info-heading {
+    text-align: left;
+    grid-column-start: c-1;
+    grid-column-end: c-2;
+    grid-row-start: r-1;
+    grid-row-end: r-2;
+}
+.cards-container .cards-right .info-heading {
+    text-align: right;
+    grid-column-start: c-1;
+    grid-column-end: c-2;
+    grid-row-start: r-1;
+    grid-row-end: r-2; 
+} */
