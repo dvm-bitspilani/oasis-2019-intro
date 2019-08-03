@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Haarlem";
+  src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
+}
+
+@font-face {
+  font-family: "sf-ui";
+  src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
+}
+
+.Contact-div {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0b0711;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+}
+
+.Contact-div > .Contact-heading {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.Contact-div > .Contact-heading > span {
+  color: white;
+  font-size: 6.5em;
+  font-family: Haarlem;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.Contact-div > .Contact-heading > span::after {
+  position: absolute;
+  left: 90%;
+  bottom: 0;
+  transform: translateX(-50%);
+  content: "";
+  height: 2px;
+  width: 20%;
+  border-bottom: 2px solid #768ad9;
+}
+
+.Contact-div > .Cards-div {
+  margin-top: 2vh;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.des-card {
+  width: 15%;
+  height: 35%;
+  background-color: #1b191e;
+  border-radius: 10px;
+  margin: 0 20px 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+}
+
+.des-card > .prof-pic {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  background: url("../src/megh.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.des-card > .name {
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+.des-card > .name > span {
+  font-family: sf-ui;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.des-card > .position {
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+.des-card > .position > span {
+  color: white;
+  font-family: sf-ui;
+  font-size: 0.9em;
+}
+
+.des-card > .phone-no {
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+.des-card > .phone-no > span {
+  color: white;
+  font-family: sf-ui;
+  font-size: 0.7em;
+}
+
+.des-card > .email {
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+.des-card > .email > span {
+  color: white;
+  font-family: sf-ui;
+  font-size: 0.7em;
+}
+
+.des-card > .line {
+  width: 30%;
+  height: 2px;
+  background-color: #768ad9;
+  margin: 5% 0 5% 0;
+}
+
+.Contact-div > .footer-div {
+  width: 90%;
+  height: 5vh;
+  border-top: 2px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.Contact-div > .footer-div > span {
+  color: white;
+  font-family: sf-ui;
+}
+
+@media (max-width: 500px) {
+  .Contact-div > .Contact-heading {
+    margin-top: 0vh;
+  }
+
+  .Contact-div > .Contact-heading > span {
+    font-size: 2.5em;
+  }
+
+  .Contact-div > .Cards-div {
+    margin-top: 0vh;
+    overflow: scroll;
+    height: 75vh;
+  }
+
+  .des-card {
+    width: 55%;
+    height: 35%;
+    margin: 7vh 0 7vh 0;
+  }
+
+  .des-card > .prof-pic {
+    width: 108px;
+    height: 108px;
+  }
+
+  .des-card > .name > span {
+    font-family: sf-ui;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .Contact-div > .footer-div {
+    width: 70%;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .Contact-div > .footer-div > span {
+    color: white;
+    font-size: 0.7em;
+    font-family: sf-ui;
+  }
+}
+
+@media (max-width: 400px) {
+  .Contact-div > .Contact-heading {
+    margin-top: 0vh;
+  }
+
+  .Contact-div > .Contact-heading > span {
+    font-size: 2.2em;
+  }
+
+  .Contact-div > .Cards-div {
+    margin-top: 0vh;
+    overflow: scroll;
+    height: 75vh;
+  }
+
+  .des-card {
+    width: 55%;
+    height: 40%;
+    margin: 7vh 0 7vh 0;
+  }
+
+  .des-card > .prof-pic {
+    width: 68px;
+    height: 68px;
+  }
+
+  .des-card > .name > span {
+    font-family: sf-ui;
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+  }
+
+  .des-card > .phone-no > span {
+    font-size: 0.5em;
+  }
+
+  .des-card > .email > span {
+    font-size: 0.5em;
+  }
+
+  .des-card > .position > span {
+    font-size: 0.7em;
+  }
+
+  .Contact-div > .footer-div {
+    width: 70%;
+    padding: 0px 20px 0px 20px;
+  }
+
+  .Contact-div > .footer-div > span {
+    color: white;
+    font-size: 0.5em;
+    font-family: sf-ui;
+  }
+}
