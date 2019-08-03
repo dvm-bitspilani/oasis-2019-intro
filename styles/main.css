@@ -11,3 +11,8 @@ a:hover {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: SFpro;
+  src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+}
+
