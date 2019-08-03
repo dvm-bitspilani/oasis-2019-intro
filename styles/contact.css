@@ -255,3 +255,9 @@
     font-family: sf-ui;
   }
 }
+
+@media (max-width: 380px) and (min-width: 360px) {
+  .des-card {
+    height: 30%;
+  }
+}
