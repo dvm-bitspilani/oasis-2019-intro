@@ -1,0 +1,25 @@
+.landing-wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  padding-top: 40px;
+}
+
+.nav-item {
+  color: white;
+  padding: 20px;
+}
+.nav-item:last-child {
+  margin-right: 70px;
+}
+
+.nav-item:hover {
+  background-color: #fff;
+}
