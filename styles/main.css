@@ -13,7 +13,16 @@ a:hover {
 }
 
 @font-face {
-  font-family: SFpro;
-  src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+  font-family: "Haarlem";
+  src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
 }
 
+@font-face {
+  font-family: "sf-ui";
+  src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
+}
+
+@font-face {
+  font-family: 'sf-reg';
+  src: url('../fonts/SF-Pro-Text-Regular.ttf');
+}

@@ -1,13 +1,3 @@
-@font-face {
-  font-family: "Haarlem";
-  src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
-}
-
-@font-face {
-  font-family: "sf-ui";
-  src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
-}
-
 .Contact-div {
   height: 100vh;
   width: 100vw;
@@ -73,7 +63,7 @@
   width: 108px;
   height: 108px;
   border-radius: 50%;
-  background: url("../src/megh.jpg");
+  background: url("../images/megh.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
