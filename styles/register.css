@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Haarlem";
+  src: url("../fonts/Haarlem\ Deco\ DEMO.ttf");
+}
+
+@font-face {
+  font-family: "sf-ui";
+  src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
+}
+
+@font-face {
+  font-family: SFpro;
+  src: url("../assets/fonts/SF-Pro-Display-Medium.otf");
+}
+
+.form-div {
+  height: 100vh;
+  width: 100%;
+  background-color: #00002e;
+  padding-top: 5vh;
+}
+
+.form-div > .heading {
+  color: #cbcbcb;
+  font-family: Haarlem;
+  font-size: 6em;
+  letter-spacing: 10px;
+  margin-left: 5vh;
+}
+
+.form-div > .form-container {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input-el {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column;
+}
+
+.input-el .text-type {
+  background-color: #02021b;
+  width: 60%;
+  padding: 2% 3% 2% 6%;
+  border-radius: 40px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1.4em;
+  font-family: sf-ui;
+}
+
+input:focus {
+  outline: none;
+}
+
+.select-wrapper {
+  width: 69%;
+  height: 12%;
+  border-radius: 40px;
+}
+
+select {
+  -webkit-appearance: none;
+  border-radius: 40px;
+  padding: 3% 3% 3% 6%;
+  color: #797777;
+  background-color: #02021b;
+  width: 100%;
+  height: 100%;
+  border: solid 3px #2263c1;
+  font-size: 1.4em;
+  font-family: sf-ui;
+}
+
+select:focus {
+  outline: none;
+}
+
+.input-el > .radio-inputs {
+  width: 70%;
+  height: 10%;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+.input-el > .radio-inputs > span {
+  margin-left: 2vh;
+  color: #ffffff;
+  font-family: sf-ui;
+  font-size: 1.5em;
+}
+
+.input-el > .radio-inputs > .radio-buttons > input {
+  margin: 2vh;
+}
+
+.input-el > .textarea-type {
+  width: 60%;
+  height: 30%;
+  padding: 3%;
+  background-color: #02021b;
+  border: 3px solid #2263c1;
+  border-radius: 5px;
+  color: #797777;
+  font-family: SFpro;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+}
+
+.form-div > .register {
+  font-size: 1.5em;
+  letter-spacing: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3vh;
+  background-image: linear-gradient(#be4dff, #4bb4fa);
+  color: white;
+  padding: 1% 5% 1% 5%;
+  border-radius: 40px;
+  font-family: SFpro;
+  cursor: pointer;
+}

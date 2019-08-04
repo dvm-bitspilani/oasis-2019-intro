@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./styles/register.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <div class="form-div">
+      <span class="heading">Registration</span>
+      <div class="form-container">
+        <div class="input-el">
+          <input type="text" placeholder="Name *" class="text-type" />
+          <div class="select-wrapper">
+            <select id="city_opt" class="select-input">
+              <option value="" class="deafult-opt">Select your College</option>
+              <option value="Pitampura">Pitampura</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Noida">Noida</option>
+            </select>
+          </div>
+
+          <div class="radio-inputs">
+            <span>Gender *</span>
+            <br />
+            <div class="radio-buttons">
+              <input type="radio" value="male" name="gender" />
+              <label for="male">Male</label>
+              <input type="radio" value="male" name="gender" />
+              <label for="female">Femlae</label>
+              <input type="radio" value="male" name="gender" />
+              <label for="others">Others</label>
+            </div>
+          </div>
+          <div class="radio-inputs">
+            <span>Year of Study *</span>
+            <br />
+            <div class="radio-buttons">
+              <input type="radio" value="first" name="yos" />
+              <label for="male">1</label>
+              <input type="radio" value="second" name="yos" />
+              <label for="female">2</label>
+              <input type="radio" value="third" name="yos" />
+              <label for="others">3</label>
+              <input type="radio" value="fourth" name="yos" />
+              <label for="others">4</label>
+            </div>
+          </div>
+          <input type="text" placeholder="City *" class="text-type" />
+        </div>
+        <div class="input-el">
+          <textarea id="textarea" class="textarea-type">Description</textarea>
+          <input type="email" placeholder="Email *" class="text-type" />
+          <input type="number" placeholder="Phone *" class="text-type" />
+          <input type="text" placeholder="Referel *" class="text-type" />
+        </div>
+      </div>
+      <span class="register">Register</span>
+    </div>
+  </body>
+</html>
