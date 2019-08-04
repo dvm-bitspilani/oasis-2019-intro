@@ -89,7 +89,7 @@
     grid-column-end: col-5;
     grid-row-start: row-2;
     grid-row-end: row-3;
-    text-align: center;
+    text-align: start;
 }
 
 .cards-container .cards-right .info{
@@ -97,7 +97,7 @@
     grid-column-end: col-3;
     grid-row-start: row-2;
     grid-row-end: row-3;
-    text-align: center;
+    text-align: end;
 }
 .cards-container .info{
     display: inline-block;
@@ -124,8 +124,10 @@
     margin-top: 30px;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid red; */
     letter-spacing: 3.18px;
+    text-decoration: underline;
+    text-underline-position: under; 
 }
 /* .cards-container .cards-left .info-heading {
     text-align: left;
@@ -140,4 +142,5 @@
     grid-column-end: c-2;
     grid-row-start: r-1;
     grid-row-end: r-2; 
+
 } */
