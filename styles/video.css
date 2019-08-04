@@ -21,14 +21,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 5vh; */
-    /* border: 1px solid teal; */
     padding-left: 25vw;
   }
   
 .video-wrapper > .video-heading > span {
     color: white;
-    font-size: 8em;
+    font-size: 6vw;
     font-family: Haarlem;
     letter-spacing: 5px;
     position: relative;
@@ -107,40 +105,60 @@
     font-weight: 100;
     /* overflow: scroll; */
 }
-/* .cards-container .cards-left .info{
-    display: grid;
-    grid-template-columns: [c-1] 40px [c-2] auto; 
-    grid-template-rows: [r-1] 40px [r-2] auto [end];
-}
-.cards-container .cards-right .info{
-    display: grid;
-    grid-template-columns: [c-1] auto [c-2] 40px; 
-    grid-template-rows: [r-1] 40px [r-2] auto [end];   
-} */
 .cards-container .info-heading{
     color: red;
     width: 100%;
     font-size: 2.047vw;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
+    margin-top: 1.86vw;
+    margin-bottom: 0.93vw;
+    padding-bottom: 0.19vw;
     /* border-bottom: 1px solid red; */
     letter-spacing: 3.18px;
     text-decoration: underline;
     text-underline-position: under; 
 }
-/* .cards-container .cards-left .info-heading {
-    text-align: left;
-    grid-column-start: c-1;
-    grid-column-end: c-2;
-    grid-row-start: r-1;
-    grid-row-end: r-2;
-}
-.cards-container .cards-right .info-heading {
-    text-align: right;
-    grid-column-start: c-1;
-    grid-column-end: c-2;
-    grid-row-start: r-1;
-    grid-row-end: r-2; 
 
-} */
+@media (max-width: 500px) {
+    .Contact-div > .Contact-heading {
+      margin-top: 0vh;
+    }
+  
+    .Contact-div > .Contact-heading > span {
+      font-size: 2.5em;
+    }
+  
+    .Contact-div > .Cards-div {
+      margin-top: 0vh;
+      overflow: scroll;
+      height: 75vh;
+    }
+  
+    .des-card {
+      width: 55%;
+      height: 35%;
+      margin: 7vh 0 7vh 0;
+    }
+  
+    .des-card > .prof-pic {
+      width: 108px;
+      height: 108px;
+    }
+  
+    .des-card > .name > span {
+      font-family: sf-ui;
+      color: white;
+      font-size: 1em;
+      font-weight: bold;
+    }
+  
+    .Contact-div > .footer-div {
+      width: 70%;
+      padding: 0px 20px 0px 20px;
+    }
+  
+    .Contact-div > .footer-div > span {
+      color: white;
+      font-size: 0.7em;
+      font-family: sf-ui;
+    }
+  }
