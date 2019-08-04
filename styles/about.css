@@ -1,5 +1,5 @@
 .about {
-    background: url("file:///home/chirag/dvm/oasis-2019-intro/images/2.png");
+    background: url("../../images/2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,11 +61,11 @@
   background-repeat: repeat-x;
 }
 #fog:before {
-  background-image: url("file:///home/chirag/dvm/oasis-2019-intro/images/Smoke.png");
+  background-image: url("../../images/Smoke.png");
   animation: drift 140s linear 0s infinite;
 }
 #fog:after {
-  background-image: url("file:///home/chirag/dvm/oasis-2019-intro/images/Smoke.png");
+  background-image: url("../../images/Smoke.png");
   animation: drift 60s linear 0s infinite;
 }
 @keyframes drift {
@@ -84,7 +84,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("file:///home/chirag/dvm/oasis-2019-intro/images/2.png");
+  background: url("../../images/2.png");
   background-position: center center;
   background-origin: content-box;
   background-size: cover;
