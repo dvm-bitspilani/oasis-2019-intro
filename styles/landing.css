@@ -32,3 +32,18 @@
   margin-top: 16vh;
   margin-left: 11vw;
 }
+
+@media all and (max-width: 500px) {
+  .landing-wrapper {
+    background: url("../assets/images/landing-mobile.png");
+    background-size: cover;
+  }
+  .navigation {
+    display: none;
+  }
+  .oasis-landing {
+    width: 100%;
+    margin: 0;
+    background-size: 100% 45%;
+  }
+}
