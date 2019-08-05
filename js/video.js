@@ -1,5 +1,6 @@
+'use strict';
 var screenWidth = window.innerWidth;
-var cards = document.getElementsByClassName("cards");
+let cards = document.getElementsByClassName("cards");
 console.log(screenWidth);
 
 window.addEventListener("resize",()=> {
@@ -9,10 +10,13 @@ window.addEventListener("resize",()=> {
 
 if(screenWidth < 700){
     console.log("dssds");
-    for(let i=1 ; i < cards.length ; i++){
+    let cards = document.getElementsByClassName("cards");
+    console.log(cards);
+    for(let i=1 ; i < cards.length ; ++i){
         console.log(i);
         cards[i].style.display="none";
     }
+
 }else{
     console.log("dssds");
     for(var i=0; i< cards.length ; i++){
