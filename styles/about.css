@@ -1,42 +1,42 @@
 .about {
-    background: url("../../images/2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    color: #ffffff;
-    width: 100vw;
+  background: url("../../images/2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+  width: 100vw;
 }
 .content {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 10vh 20vh 30px 60vh;
-    grid-template-columns: 10vw 10vw 40vw 10vw 10vw 10vw 10vw;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 10vh 20vh 30px 60vh;
+  grid-template-columns: 10vw 10vw 40vw 10vw 10vw 10vw 10vw;
 }
 .about-heading {
-    font-family: Haarlem;
-    font-size: 130px;
-    grid-row-start: 2;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    z-index: 1000;
+  font-family: Haarlem;
+  font-size: 130px;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  z-index: 1000;
 }
 .line {
-    width: 135px;
-    height: 3px;
-    background: #62A0FB;
-    box-shadow: #E95585 0px 0px 2px;
-    z-index: 0;
+  width: 135px;
+  height: 3px;
+  background: #62a0fb;
+  box-shadow: #e95585 0px 0px 2px;
+  z-index: 0;
 }
 .about-text {
-    grid-row-start: 4;
-    font-family: sf-reg;
-    font-size: 26px;
-    line-height: 29px;
-    word-spacing: 2px;
-    grid-column-start: 3;
-    z-index: 140;
+  grid-row-start: 4;
+  font-family: sf-reg;
+  font-size: 26px;
+  line-height: 29px;
+  word-spacing: 2px;
+  grid-column-start: 3;
+  z-index: 140;
 }
 
 #fog {
@@ -49,7 +49,8 @@
   pointer-events: none;
   opacity: 0.9;
 }
-#fog:before, #fog:after {
+#fog:before,
+#fog:after {
   content: "";
   position: absolute;
   top: 0;
@@ -78,7 +79,7 @@
 }
 
 /* Now the same background, but with brightness filters*/
-.lightning{
+.lightning {
   position: absolute;
   top: 100vh;
   left: 0;
@@ -96,51 +97,65 @@
 }
 
 /*Now just a opacity animation*/
-.flashit{
--webkit-animation: flash ease-out 7s infinite;
-animation: flash ease-out 7s infinite;
--webkit-animation-delay: 10s;
-        animation-delay: 10s;
+.flashit {
+  -webkit-animation: flash ease-out 7s infinite;
+  animation: flash ease-out 7s infinite;
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
 }
 
 @-webkit-keyframes flash {
-	from { opacity: 0; } 
-  92% { opacity: 0; }
-	93% { opacity: 0.6; }
-  94% { opacity: 0.2; }
-  96% { opacity: 0.9; } 
-	to { opacity: 0; }
+  from {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  93% {
+    opacity: 0.6;
+  }
+  94% {
+    opacity: 0.2;
+  }
+  96% {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes flash {
-  from { 
+  from {
     opacity: 0;
     z-index: 120;
-  } 
-    92% { 
-      opacity: 0;
-      z-index: 99;
-    }
-	93% { 
+  }
+  92% {
+    opacity: 0;
+    z-index: 99;
+  }
+  93% {
     opacity: 0.6;
-      z-index: 120;
-   }
-    94% { opacity: 0.2;
-      z-index: 120;
-     }
-    96% { opacity: 1;
-      z-index: 120;
-     } 
-  to { 
+    z-index: 120;
+  }
+  94% {
+    opacity: 0.2;
+    z-index: 120;
+  }
+  96% {
+    opacity: 1;
+    z-index: 120;
+  }
+  to {
     opacity: 0;
     z-index: -1;
-   }
+  }
 }
 /*End! is that simple! */
 
 /*Now just some stupid logo to get some look and feel */
 
-@media(max-width: 1400px) {
+@media (max-width: 1400px) {
   .about-text {
     grid-column-end: 5;
   }
@@ -150,7 +165,7 @@ animation: flash ease-out 7s infinite;
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-text {
     font-size: 24px;
     grid-column-end: 6;
@@ -161,7 +176,7 @@ animation: flash ease-out 7s infinite;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .about-text {
     font-size: 16px;
   }
@@ -174,7 +189,7 @@ animation: flash ease-out 7s infinite;
   }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
   .about-text {
     font-size: 14px;
     line-height: 18px;
@@ -191,7 +206,7 @@ animation: flash ease-out 7s infinite;
   }
 }
 
-@media(max-width: 330px) {
+@media (max-width: 330px) {
   .about-text {
     font-size: 13px;
     line-height: 17px;
