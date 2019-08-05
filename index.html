@@ -185,5 +185,14 @@
       </div>
   </body>
   <script src="./js/index.js"></script>
+  <script>
+    var nav = document.getElementsByClassName("navigation")[0];
+    function openNav() {
+      nav.style.transform = "translateX(0)";
+    }
+    function closeNav() {
+      nav.style.transform = "translateX(-100vw)"
+    }
+  </script>
   <script src="./js/video.js"></script>
 </html>

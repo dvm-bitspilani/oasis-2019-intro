@@ -136,3 +136,84 @@ select:focus {
   font-family: SFpro;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #00002e;
+  }
+  .form-div > .heading {
+    font-size: 2em;
+    margin-left: 0vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form-div > .form-container {
+    flex-flow: column;
+    margin-top: 5vh;
+    height: 115vh;
+  }
+
+  .input-el > .radio-inputs > span {
+    font-size: 1.2em;
+  }
+
+  label {
+    font-size: 0.7em;
+  }
+
+  .input-el {
+    width: 100%;
+  }
+
+  .input-el > .radio-inputs {
+    width: 100%;
+    text-align: center;
+  }
+
+  .input-el .text-type {
+    font-size: 1.2em;
+  }
+
+  select {
+    font-size: 1.2em;
+  }
+
+  .form-div > .register {
+    margin-bottom: 4vh;
+    font-size: 1.2em;
+    padding: 3% 8% 3% 8%;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-div > .heading {
+    font-size: 1.5em;
+  }
+  .input-el .text-type {
+    font-size: 0.7em;
+  }
+  select {
+    font-size: 0.7em;
+  }
+  .form-div > .form-container {
+    height: 135vh;
+  }
+  .select-wrapper {
+    width: 70%;
+    height: 9%;
+  }
+  .input-el > .radio-inputs > span {
+    font-size: 1em;
+  }
+
+  .input-el > .textarea-type {
+    font-size: 0.7em;
+  }
+  .form-div > .register {
+    padding: 3% 12% 3% 12%;
+  }
+}
