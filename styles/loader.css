@@ -1,0 +1,133 @@
+.heading {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    margin: auto;
+}
+.container {
+    animation: contanim 4s infinite;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.point {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 5px 2px #fff;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: pointanim 10s infinite;
+    animation: pointanim 4s infinite;
+  }
+  .point:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .point:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  .point:nth-child(3) {
+    animation-delay: 0.75s;
+  }
+
+  
+.logo {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20vh;
+  }
+  
+  .logo b{
+    font: 100 7.5vh "sf-ui";
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #00ffff, 0 0 0.5em #4dffff, 0 0 0.1em #9affff, 0 10px 3px #000;
+  }
+  .logo b span{
+    animation: blink linear infinite 2s;
+  }
+  @keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: #333;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: #333;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: #333;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
+  
+  
+
+  @-webkit-keyframes pointanim {
+    50% {
+      transform: translate3d(0px, 150px, -150px) scale3d(8, 8, 4) skew(10deg);
+      box-shadow: 0 0 10px 2px #00ffff;
+    }
+    100% {
+      box-shadow: 0 0 5px 2px #ff00ff;
+    }
+  }
+  @keyframes pointanim {
+    50% {
+      transform: translate3d(0px, 150px, -150px) scale3d(8, 8, 4) skew(10deg);
+      box-shadow: 0 0 10px 2px #00ffff;
+    }
+    100% {
+      box-shadow: 0 0 5px 2px #ff00ff;
+    }
+  }
+  @-webkit-keyframes contanim {
+    0% {
+      transform: rotate(-180deg) translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: rotate(-180deg) translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+      transform: rotate(180deg) translate(-50%, -50%) scale(1);
+    }
+  }
+  @keyframes contanim {
+    0% {
+      transform: rotate(-180deg) translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: rotate(-180deg) translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+      transform: rotate(180deg) translate(-50%, -50%) scale(1);
+    }
+  }
+  

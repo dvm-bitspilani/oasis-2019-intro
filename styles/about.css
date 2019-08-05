@@ -6,6 +6,7 @@
   height: 100vh;
   color: #ffffff;
   width: 100vw;
+  opacity: 0;
 }
 .content {
   height: 100vh;
