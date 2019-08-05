@@ -14,11 +14,13 @@
 
   <body>
     <div class="landing-wrapper">
+      <!-- <div class="open-nav" onclick="openNav()">Open</div> -->
       <div class="navigation">
+        <!-- <div class="close-nav" onclick="closeNav()">Close</div> -->
         <div class="nav-item">HOME</div>
         <div class="nav-item">ABOUT US</div>
         <div class="nav-item">VIDEOS</div>
-        <div class="nav-item">SPONSORE</div>
+        <div class="nav-item">SPONSORS</div>
         <div class="nav-item">CONTACT US</div>
       </div>
       <div class="oasis-landing"></div>
@@ -173,5 +175,14 @@
     </div>
   </div>
   </body>
+  <script>
+    var nav = document.getElementsByClassName("navigation")[0];
+    function openNav() {
+      nav.style.transform = "translateX(0)";
+    }
+    function closeNav() {
+      nav.style.transform = "translateX(-100vw)"
+    }
+  </script>
   <script src="./js/video.js"></script>
 </html>
