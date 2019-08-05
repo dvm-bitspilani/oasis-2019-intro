@@ -122,7 +122,7 @@
   font-size: 0.7em;
 }
 
-.des-card > .line {
+.des-card > .dash {
   width: 30%;
   height: 2px;
   background-color: #768ad9;
@@ -161,7 +161,7 @@
 
   .des-card {
     width: 55%;
-    height: 35%;
+    height: 33%;
     margin: 7vh 0 7vh 0;
   }
 
@@ -186,6 +186,32 @@
     color: white;
     font-size: 0.7em;
     font-family: sf-ui;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .Contact-div > .Cards-div {
+    overflow: scroll;
+    margin-top: 0vh;
+  }
+
+  .Contact-div > .Cards-div > .des-card {
+    width: 35%;
+    height: 25%;
+    margin: 5.5vh 20px 0 20px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 700px) {
+  .Contact-div > .Cards-div {
+    overflow: scroll;
+    margin-top: 0vh;
+  }
+
+  .Contact-div > .Cards-div > .des-card {
+    width: 35%;
+    height: 31%;
+    margin: 10.5vh 20px 0 20px;
   }
 }
 
