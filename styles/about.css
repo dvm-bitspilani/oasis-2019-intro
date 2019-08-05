@@ -161,13 +161,18 @@
 }
 /*End! is that simple! */
 
+@media(max-width: 1600px){
+  .about-text {
+    grid-column-end: 5;
+  }
+}
+
 @media (max-width: 1400px) {
   .about-text {
     grid-column-end: 5;
   }
   .about-heading {
     font-size: 120px;
-    grid-column-end: 4;
   }
 }
 
