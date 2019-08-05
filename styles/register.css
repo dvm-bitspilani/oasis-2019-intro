@@ -129,6 +129,7 @@ select:focus {
   transform: translateX(-50%);
   margin-top: 3vh;
   background-image: linear-gradient(#be4dff, #4bb4fa);
+  box-shadow: 0 0 35px #be4dff;
   color: white;
   padding: 1% 5% 1% 5%;
   border-radius: 40px;
