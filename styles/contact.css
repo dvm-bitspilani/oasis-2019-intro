@@ -144,6 +144,12 @@
   font-family: sf-ui;
 }
 
+.Contact-div > .footer-div > span a {
+  color: white;
+  font-family: sf-ui;
+  margin-left: 1vw;
+}
+
 @media (max-width: 500px) {
   .Contact-div > .Contact-heading {
     margin-top: 0vh;
