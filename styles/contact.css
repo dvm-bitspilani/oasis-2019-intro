@@ -144,6 +144,12 @@
   font-family: sf-ui;
 }
 
+.Contact-div > .footer-div > span a {
+  color: white;
+  font-family: sf-ui;
+  margin-left: 1vw;
+}
+
 @media (max-width: 500px) {
   .Contact-div > .Contact-heading {
     margin-top: 0vh;
@@ -178,7 +184,7 @@
   }
 
   .Contact-div > .footer-div {
-    width: 70%;
+    width: 80%;
     padding: 0px 20px 0px 20px;
   }
 
@@ -272,8 +278,32 @@
   }
 }
 
-@media (max-width: 380px) and (min-width: 360px) {
+@media (max-width: 450px) and (min-width: 410px) {
+  .des-card {
+    height: 37%;
+    margin: 6vh 0 7vh 0;
+  }
+  .des-card > .prof-pic {
+    width: 98px;
+    height: 98px;
+  }
+}
+
+@media (max-width: 380px) and (min-width: 377px) {
   .des-card {
     height: 30%;
+  }
+}
+
+@media (max-width: 376px) and (min-width: 340px) {
+  .des-card {
+    height: 35%;
+  }
+}
+
+@media (max-width: 340px) and (min-width: 320px) {
+  .des-card {
+    height: 37%;
+    margin: 6vh 0 7vh 0;
   }
 }

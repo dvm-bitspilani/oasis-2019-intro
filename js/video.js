@@ -14,7 +14,7 @@ window.addEventListener("resize",()=> {
         }
         // cards[0].style.display = "grid";
     }else{
-        console.log("dssds");
+        // console.log("dssds");
         for(var i=0; i< cards.length ; i++){
             // cards[i].style.display = "grid";
             cards[i].style.opacity = 1;

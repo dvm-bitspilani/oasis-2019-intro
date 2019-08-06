@@ -8,22 +8,50 @@
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
     <link rel="stylesheet" href="./styles//about.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
     <link rel="stylesheet" href="./styles/video.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
     <title>OASIS'19</title>
   </head>
-
   <body>
-    <div class="landing-wrapper">
-      <div class="navigation">
-        <div class="nav-item">HOME</div>
-        <div class="nav-item">ABOUT US</div>
-        <div class="nav-item">VIDEOS</div>
-        <div class="nav-item">SPONSORE</div>
-        <div class="nav-item">CONTACT US</div>
+
+  <div class="loader_wraper">
+    <div class="loader">
+      <div class="container">
+        <div class="point"></div>
+        <div class="point"></div>
+        <div class="point"></div>
       </div>
-      <div class="oasis-landing"></div>
+      <div class="logo"><b>O<span>A</span>S<span>I</span>S<span> '19</span></b></div>
     </div>
-    <div class="about">
+  </div>
+
+      <div class="landing-wrapper">
+        <div id="hamburger" onclick="toogleNav()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="navigation">
+          <div class="oasis-logo"></div>
+          <div class="nav-item">HOME</div>
+          <div class="nav-item">ABOUT US</div>
+          <div class="nav-item">VIDEOS</div>
+          <div class="nav-item">SPONSORS</div>
+          <div class="nav-item">CONTACT US</div>
+          <div class="nav-item">
+          	<a href="./register.html">REGISTER</a>
+          </div>
+        </div>
+        <div class="oasis-landing"></div>
+        <div class="mobile-register">
+        	<a href="./register.html">REGISTER</a>
+        </div>
+      </div>
+
+  <div class="about">
       <div id="fog"></div>
       <div class="lightning flashit"></div>
       <div class="content">
@@ -46,7 +74,7 @@
           McClintock, a Latin Sydney College.
         </div>
       </div>
-  
+
   <div class="video-wrapper">
     <div class="video-heading">
         <span>Videos</span>
@@ -64,7 +92,7 @@
             This much awaited sporting extravaganza, held from 13th September
         </div>
       </div>
-
+      
       <div class="cards cards-right">
           <div class="thumbnail"></div>
           <div class="info">
@@ -82,95 +110,97 @@
              sports related events, BOSM promises
         </div>
       </div>
-
       <div class="cards cards-right">
-          <div class="thumbnail">
-          </div>
-          <div class="info">
-              <div class="info-heading">OASIS INTRO 4</div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat f
-              ugit exercitationem possimus distinctio 4.
-          </div>
+            <div class="thumbnail">
+            </div>
+            <div class="info">
+                <div class="info-heading">OASIS INTRO 4</div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat f
+                ugit exercitationem possimus distinctio .
+            </div>
+        </div>
+        
       </div>
-      
     </div>
-  </div>
 
-  <div class="Contact-div">
-    <div class="Contact-heading">
-      <span>Contact Us</span>
-    </div>
-    <div class="Cards-div">
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
+    <div class="Contact-div">
+      <div class="Contact-heading">
+        <span>Contact Us</span>
       </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
+      <div class="Cards-div">
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
+        <div class="des-card">
+          <div class="prof-pic"></div>
+          <div class="name"><span>Megh Thakkar</span></div>
+          <div class="position"><span>Online Registrations</span></div>
+          <div class="phone-no"><span>9999999999</span></div>
+          <div class="email"><span>webmaster@gmail.com</span></div>
+          <div class="dash"></div>
+        </div>
       </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
+      <div class="footer-div">
+        <span>Department of Visual Media ,BITS Pilani</span>
+        <span>FOLLOW US ON
+          <a href="" target="blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="" target="blank"><i class="fab fa-instagram"></i></a>
+        </span>
       </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
-      </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
-      </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
-      </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
-      </div>
-      <div class="des-card">
-        <div class="prof-pic"></div>
-        <div class="name"><span>Megh Thakkar</span></div>
-        <div class="position"><span>Online Registrations</span></div>
-        <div class="phone-no"><span>9999999999</span></div>
-        <div class="email"><span>webmaster@gmail.com</span></div>
-        <div class="dash"></div>
-      </div>
-    </div>
-    <div class="footer-div">
-      <span>Department of Visual Media ,BITS Pilani</span>
-      <span>FOLLOW US ON</span>
-    </div>
-  </div>
   </body>
+  <script src="./js/index.js"></script>
   <script src="./js/video.js"></script>
 </html>
