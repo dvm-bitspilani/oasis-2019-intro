@@ -10,12 +10,12 @@ window.addEventListener("resize",()=> {
     if(screenWidth < 700){
         // console.log(cards);
         for(let i=1 ; i < cards.length ; i++){
-            console.log(i);
+            // console.log(i);
             cards[i].style.display = "none";
         }
         cards[0].style.display = "grid";
     }else{
-        console.log("dssds");
+        // console.log("dssds");
         for(var i=0; i< cards.length ; i++){
             cards[i].style.display = "grid";
         }
@@ -49,7 +49,7 @@ function next(){
         currentCard = 1;
     }
     for(let i=0 ; i < cards.length ; i++){
-        console.log(i);
+        // console.log(i);
         cards[i].style.display = "none";
     }
     cards[currentCard-1].style.display = "grid";
@@ -61,7 +61,7 @@ function back(){
         currentCard = cards.length;
     }
     for(let i=0 ; i < cards.length ; i++){
-        console.log(i);
+        // console.log(i);
         cards[i].style.display = "none";
     }
     cards[currentCard-1].style.display = "grid";

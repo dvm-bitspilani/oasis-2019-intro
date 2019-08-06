@@ -28,8 +28,14 @@
   </div>
 
       <div class="landing-wrapper">
-        <div class="oasis-logo"></div>
-         <div class="navigation">
+        <div id="hamburger" onclick="toogleNav()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="navigation">
+          <div class="oasis-logo"></div>
           <div class="nav-item">HOME</div>
           <div class="nav-item">ABOUT US</div>
           <div class="nav-item">VIDEOS</div>
@@ -197,14 +203,5 @@
       </div>
   </body>
   <script src="./js/index.js"></script>
-  <script>
-    var nav = document.getElementsByClassName("navigation")[0];
-    function openNav() {
-      nav.style.transform = "translateX(0)";
-    }
-    function closeNav() {
-      nav.style.transform = "translateX(-100vw)"
-    }
-  </script>
   <script src="./js/video.js"></script>
 </html>

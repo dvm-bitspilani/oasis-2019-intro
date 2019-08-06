@@ -19,3 +19,40 @@ window.onload = function() {
       // }
     }, 4500);
 };
+
+let hue = 0;
+setInterval(() => {
+  if(hue < 360) 
+    hue += 30;
+  else
+    hue = 0;
+
+  document.getElementsByClassName('landing-wrapper')[0].style.transition = '1s';
+  document.getElementsByClassName('landing-wrapper')[0].style.filter = 'hue-rotate(' + hue + 'deg)';
+}, 5000);
+
+
+var nav = document.getElementsByClassName("navigation")[0];
+var isNavOpen = false;
+function toogleNav() {
+  if(!isNavOpen) {
+    isNavOpen = true;
+    openNav();
+    document.querySelectorAll("#hamburger > div")[0].style.transform="rotate(45deg)";
+    document.querySelectorAll("#hamburger > div")[2].style.transform="rotate(-45deg)";
+    document.querySelectorAll("#hamburger > div")[1].style.opacity="0";
+  } else {
+    isNavOpen = false;
+    closeNav();
+    document.querySelectorAll("#hamburger > div")[0].style.transform="rotate(0deg)";
+    document.querySelectorAll("#hamburger > div")[2].style.transform="rotate(0deg)";
+    document.querySelectorAll("#hamburger > div")[1].style.opacity="1";
+  }
+}
+
+function openNav() {
+  nav.style.transform = "translateX(0)";
+}
+function closeNav() {
+  nav.style.transform = "translateX(-100vw)"
+}
