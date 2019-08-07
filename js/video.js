@@ -12,12 +12,13 @@ window.addEventListener("resize",()=> {
             console.log(i);
             cards[i].style.opacity = 0;
         }
-        // cards[0].style.display = "grid";
+        cards[0].style.display = "grid";
     }else{
         // console.log("dssds");
         for(var i=0; i< cards.length ; i++){
             // cards[i].style.display = "grid";
             cards[i].style.opacity = 1;
+            cards[i].style.transform = "scale(1)";
         }
     }   
 });
