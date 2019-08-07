@@ -69,7 +69,7 @@ var profpic = [
   "tanvi.png"
 ];
 
-var url = "../images/";
+var url = "/images/";
 
 for (var i = 0; i < document.getElementsByClassName("prof-pic").length; i++) {
   document.getElementsByClassName("prof-pic")[i].style.backgroundImage =
