@@ -6,6 +6,57 @@
   transition: 0.5s;
 }
 
+.bottom-div {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 50px;
+  margin: auto;
+  z-index: 1;
+  filter: none;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+.mousey {
+  width: 3px;
+  padding: 6px 10px;
+  height: 25px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+}
+
 .oasis-logo {
   width: 15vw;
   height: 15vh;
@@ -28,8 +79,8 @@
   justify-content: space-between;
   width: 80px;
 }
-.fa-instagram :before { 
-  content: '';
+.fa-instagram :before {
+  content: "";
 }
 .fab {
   color: white;
@@ -90,6 +141,10 @@
   .landing-wrapper {
     background: url("../assets/images/landing-mobile.png");
     background-size: cover;
+  }
+
+  .mousey {
+    display: none;
   }
 
   .social-links {
