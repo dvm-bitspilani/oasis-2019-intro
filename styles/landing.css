@@ -19,7 +19,21 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.social-links {
+  display: flex;
+  position: absolute;
+  top: 95vh;
+  left: 2vw;
+  color: white;
+  justify-content: space-between;
+  width: 60px;
+}
+.fa-instagram :before { 
+  content: '';
+}
+.fab {
+  color: white;
+}
 .navigation {
   display: flex;
   width: 100%;
@@ -78,7 +92,12 @@
     background-size: cover;
   }
 
-
+  .social-links {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 40px
+  }
   #hamburger {
     display: block;
     position: absolute;
