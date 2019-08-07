@@ -143,6 +143,10 @@
     background-size: cover;
   }
 
+  .mousey {
+    display: none;
+  }
+
   .social-links {
     position: relative;
     top: 0;
