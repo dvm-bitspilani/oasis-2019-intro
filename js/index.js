@@ -60,18 +60,18 @@ function closeNav() {
   nav.style.transform = "translateX(-100vw)";
 }
 
-var profpic = [
-  "chandak.png",
-  "Parth.jpg",
-  "adit.png",
-  "DVM.png",
-  "pawar.jpg",
-  "tanvi.png"
-];
+// var profpic = [
+//   "chandak.png",
+//   "Parth.jpg",
+//   "adit.png",
+//   "DVM.png",
+//   "pawar.jpg",
+//   "tanvi.png"
+// ];
 
-var url = "../images/";
+// var url = "../images/";
 
-for (var i = 0; i < document.getElementsByClassName("prof-pic").length; i++) {
-  document.getElementsByClassName("prof-pic")[i].style.backgroundImage =
-    "url(" + url + profpic[i] + ")";
-}
+// for (var i = 0; i < document.getElementsByClassName("prof-pic").length; i++) {
+//   document.getElementsByClassName("prof-pic")[i].style.backgroundImage =
+//     "url(" + url + profpic[i] + ")";
+// }
