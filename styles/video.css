@@ -285,7 +285,7 @@
         border-radius: 50%;
         height: 20px;
         width:20px;
-        background-image:  url("../../assets/icons/left-arrow.png");
+        background-image:  url("../assets/icons/left-arrow.png");
         background-size: cover;
         line-height: 4px;
     }
@@ -293,7 +293,7 @@
         border-radius: 50%;
         height: 20px;
         width:20px;
-        background-image:  url("/assets/icons/right-arrow.png");
+        background-image:  url("../assets/icons/right-arrow.png");
         background-size: cover;
         line-height: 4px;
     }
