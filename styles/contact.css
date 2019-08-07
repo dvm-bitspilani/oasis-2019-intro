@@ -76,7 +76,7 @@
   background: url('../images/Parth.jpg');
 } */
 
-.des-card:nth-of-type(2) > .prof-pic {
+/* .des-card:nth-of-type(2) > .prof-pic {
   background: url('../images/Parth.jpg');
 }
 
@@ -92,9 +92,9 @@
   background: url('../images/Parth.jpg');
 } */
 
-.des-card:nth-of-type(6) > .prof-pic {
+/* .des-card:nth-of-type(6) > .prof-pic {
   background: url('../images/tanvi.png');
-}
+} */
 
 .des-card > .name {
   width: 100%;
