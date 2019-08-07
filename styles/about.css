@@ -17,7 +17,7 @@
 }
 .about-heading {
   font-family: Haarlem;
-  font-size: 130px;
+  font-size: 85px;
   grid-row-start: 2;
   grid-column-start: 2;
   grid-column-end: 4;
@@ -30,11 +30,12 @@
   box-shadow: #e95585 0px 0px 2px;
   z-index: 0;
 }
+
 .about-text {
   grid-row-start: 4;
   font-family: sf-reg;
-  font-size: 26px;
-  line-height: 29px;
+  font-size: 23px;
+  line-height: 35px;
   word-spacing: 2px;
   grid-column-start: 3;
   z-index: 140;
@@ -162,7 +163,7 @@
 }
 /*End! is that simple! */
 
-@media(max-width: 1600px){
+@media (max-width: 1600px) {
   .about-text {
     grid-column-end: 5;
   }
