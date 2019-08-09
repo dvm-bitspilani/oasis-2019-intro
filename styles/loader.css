@@ -48,7 +48,7 @@
 }
 @media all and (max-width: 600px) {
   .loader > div > div {
-    margin: 22.5vh auto;
+    margin: 20vh auto;
   }
 }
 
