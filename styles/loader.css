@@ -50,6 +50,10 @@
   .loader > div > div {
     margin: 20vh auto;
   }
+
+  .logo {
+    bottom: 20vh;
+  }
 }
 
 @keyframes plasma {
