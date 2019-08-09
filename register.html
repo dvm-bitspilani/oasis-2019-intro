@@ -32,7 +32,7 @@
             </select>
           </div>
 
-          <div class="radio-inputs">
+          <!-- <div class="radio-inputs">
             <span>Gender *</span>
             <br />
             <div class="radio-buttons">
@@ -43,8 +43,8 @@
               <input type="radio" value="O" name="gender" />
               <label for="others">Others</label>
             </div>
-          </div>
-          <div class="radio-inputs">
+          </div> -->
+          <!-- <div class="radio-inputs">
             <span>Year of Study *</span>
             <br />
             <div class="radio-buttons">
@@ -57,7 +57,29 @@
               <input type="radio" value="4" name="yos" />
               <label for="others">4</label>
             </div>
+          </div> -->
+          <div class="select-wrapper">
+            <select
+              id="gender_opt"
+              class="select-input"
+              onchange="getgendervalue()"
+            >
+              <option value="">Select your Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Femlae</option>
+              <option value="O">Others</option>
+            </select>
           </div>
+          <div class="select-wrapper">
+            <select id="yos_opt" class="select-input" onchange="getyosvalue()">
+              <option value="">Select your Year of Study</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
           <input type="text" placeholder="City *" class="text-type" id="city" />
         </div>
         <div class="input-el">

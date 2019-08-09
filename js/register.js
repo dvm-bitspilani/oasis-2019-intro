@@ -59,22 +59,34 @@ function getcollegeid() {
   console.log(collegeid);
 }
 
+function getgendervalue() {
+  const val = document.getElementById("gender_opt").value;
+  gender_value = val;
+  console.log(val);
+}
+
+function getyosvalue() {
+  const val = document.getElementById("yos_opt").value;
+  yos_value = val;
+  console.log(val);
+}
+
 function prereg() {
   const name = document.getElementById("name").value;
-  const gender = document.getElementsByName("gender");
-  for (var i = 0; i < gender.length; i++) {
-    if (gender[i].checked) {
-      gender_value = gender[i].value;
-    }
-  }
-  console.log(gender_value);
-  const yos = document.getElementsByName("yos");
-  for (var i = 0; i < yos.length; i++) {
-    if (yos[i].checked) {
-      yos_value = yos[i].value;
-    }
-  }
-  console.log(yos_value);
+  //   const gender = document.getElementsByName("gender");
+  //   for (var i = 0; i < gender.length; i++) {
+  //     if (gender[i].checked) {
+  //       gender_value = gender[i].value;
+  //     }
+  //   }
+  //   console.log(gender_value);
+  //   const yos = document.getElementsByName("yos");
+  //   for (var i = 0; i < yos.length; i++) {
+  //     if (yos[i].checked) {
+  //       yos_value = yos[i].value;
+  //     }
+  //   }
+  //   console.log(yos_value);
   const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
@@ -89,6 +101,7 @@ function prereg() {
     college_id: collegeid,
     events: eventsidarr
   };
+  console.log(data);
 
   fetch("https://bits-oasis.org/registrations/Register/", {
     method: "post",
@@ -102,7 +115,7 @@ function prereg() {
       return response.json();
     })
     .then(function(result) {
-      alert(result);
+      alert(result.message);
     })
     .catch(function(error) {
       console.log(error);
