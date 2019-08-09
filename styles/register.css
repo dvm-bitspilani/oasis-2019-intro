@@ -122,7 +122,7 @@ select:focus {
 
 .select-wrapper:nth-child(1) {
   width: 60%;
-  height: 30%;
+  height: 45%;
   padding: 3%;
   background-color: #02021b;
   border: 3px solid #2263c1;

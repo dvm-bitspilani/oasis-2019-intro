@@ -21,7 +21,7 @@
       ></a>
       <div class="form-container">
         <div class="input-el">
-          <input type="text" placeholder="Name *" class="text-type" />
+          <input type="text" placeholder="Name *" class="text-type" id="name" />
           <div class="select-wrapper">
             <select
               id="city_opt"
@@ -36,11 +36,11 @@
             <span>Gender *</span>
             <br />
             <div class="radio-buttons">
-              <input type="radio" value="male" name="gender" />
+              <input type="radio" value="M" name="gender" />
               <label for="male">Male</label>
-              <input type="radio" value="male" name="gender" />
+              <input type="radio" value="F" name="gender" />
               <label for="female">Femlae</label>
-              <input type="radio" value="male" name="gender" />
+              <input type="radio" value="O" name="gender" />
               <label for="others">Others</label>
             </div>
           </div>
@@ -48,29 +48,38 @@
             <span>Year of Study *</span>
             <br />
             <div class="radio-buttons">
-              <input type="radio" value="first" name="yos" />
+              <input type="radio" value="1" name="yos" />
               <label for="male">1</label>
-              <input type="radio" value="second" name="yos" />
+              <input type="radio" value="2" name="yos" />
               <label for="female">2</label>
-              <input type="radio" value="third" name="yos" />
+              <input type="radio" value="3" name="yos" />
               <label for="others">3</label>
-              <input type="radio" value="fourth" name="yos" />
+              <input type="radio" value="4" name="yos" />
               <label for="others">4</label>
             </div>
           </div>
-          <input type="text" placeholder="City *" class="text-type" />
+          <input type="text" placeholder="City *" class="text-type" id="city" />
         </div>
         <div class="input-el">
           <div class="select-wrapper" id="events_opt">
             <span>Events</span>
             <br />
           </div>
-          <input type="email" placeholder="Email *" class="text-type" />
-          <input type="number" placeholder="Phone *" class="text-type" />
-          <input type="text" placeholder="Referel *" class="text-type" />
+          <input
+            type="email"
+            placeholder="Email *"
+            class="text-type"
+            id="email"
+          />
+          <input
+            type="number"
+            placeholder="Phone *"
+            class="text-type"
+            id="phone"
+          />
         </div>
       </div>
-      <span class="register">Register</span>
+      <span class="register" onclick="prereg()">Register</span>
     </div>
   </body>
   <script src="./js/register.js"></script>

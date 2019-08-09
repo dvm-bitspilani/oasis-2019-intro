@@ -1,7 +1,9 @@
 var textarea = document.getElementById("textarea_type");
 var eventlist = document.getElementsByClassName("events_el");
-var namearr = [];
-var idarr = [];
+var eventsidarr = [];
+var collegeid;
+var gender_value;
+var yos;
 
 window.onload = function() {
   const college_select = document.getElementById("city_opt");
@@ -38,6 +40,8 @@ window.onload = function() {
             console.log(this.textContent);
             console.log(this.id);
             this.style.opacity = "0.1";
+            eventsidarr.push(parseInt(this.id));
+            console.log(eventsidarr);
           };
           events_select.appendChild(opt);
         }
@@ -51,4 +55,56 @@ window.onload = function() {
 function getcollegeid() {
   const val = document.getElementById("city_opt").value;
   console.log(val);
+  collegeid = parseInt(val);
+  console.log(collegeid);
+}
+
+function prereg() {
+  const name = document.getElementById("name").value;
+  const gender = document.getElementsByName("gender");
+  for (var i = 0; i < gender.length; i++) {
+    if (gender[i].checked) {
+      gender_value = gender[i].value;
+    }
+  }
+  console.log(gender_value);
+  const yos = document.getElementsByName("yos");
+  for (var i = 0; i < yos.length; i++) {
+    if (yos[i].checked) {
+      yos_value = yos[i].value;
+    }
+  }
+  console.log(yos_value);
+  const city = document.getElementById("city").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+
+  data = {
+    email_id: email,
+    name: name,
+    gender: gender_value,
+    city: city,
+    year: yos_value,
+    phone: phone,
+    college_id: collegeid,
+    events: eventsidarr
+  };
+
+  fetch("https://bits-oasis.org/registrations/Register/", {
+    method: "post",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(result) {
+      alert(result);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 }
