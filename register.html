@@ -23,7 +23,11 @@
         <div class="input-el">
           <input type="text" placeholder="Name *" class="text-type" />
           <div class="select-wrapper">
-            <select id="city_opt" class="select-input">
+            <select
+              id="city_opt"
+              class="select-input"
+              onchange="getcollegeid()"
+            >
               <option value="">Select your College</option>
             </select>
           </div>
@@ -57,6 +61,11 @@
           <input type="text" placeholder="City *" class="text-type" />
         </div>
         <div class="input-el">
+          <div class="select-wrapper">
+            <select id="events_opt" class="select-input">
+              <option value="">Select events</option>
+            </select>
+          </div>
           <input type="email" placeholder="Email *" class="text-type" />
           <input type="number" placeholder="Phone *" class="text-type" />
           <input type="text" placeholder="Referel *" class="text-type" />
