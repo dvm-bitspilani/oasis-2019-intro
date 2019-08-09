@@ -1,3 +1,8 @@
+var textarea = document.getElementById("textarea_type");
+var eventlist = document.getElementsByClassName("events_el");
+var namearr = [];
+var idarr = [];
+
 window.onload = function() {
   const college_select = document.getElementById("city_opt");
   const events_select = document.getElementById("events_opt");
@@ -25,10 +30,16 @@ window.onload = function() {
       for (var i = 0; i < response.length; i++) {
         for (var j = 0; j < response[i].events.length; j++) {
           console.log(response[i].events[j].name);
-          var opt = document.createElement("option");
-          opt.value = response[i].events[j].id;
+          var opt = document.createElement("p");
+          opt.setAttribute("id", response[i].events[j].id);
+          opt.classList.add("events_el");
           opt.innerHTML = response[i].events[j].name;
-          events_select.add(opt);
+          opt.onclick = function() {
+            console.log(this.textContent);
+            console.log(this.id);
+            this.style.opacity = "0.1";
+          };
+          events_select.appendChild(opt);
         }
       }
     })

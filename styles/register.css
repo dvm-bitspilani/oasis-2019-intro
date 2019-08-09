@@ -120,7 +120,7 @@ select:focus {
   margin: 2vh;
 }
 
-.input-el > .textarea-type {
+.select-wrapper:nth-child(1) {
   width: 60%;
   height: 30%;
   padding: 3%;
@@ -131,6 +131,16 @@ select:focus {
   font-family: SFpro;
   letter-spacing: 2px;
   font-size: 1.5em;
+  overflow: auto;
+}
+
+.select-wrapper:nth-child(1) > span {
+  border-bottom: 1px solid #797777;
+  padding-bottom: 1%;
+}
+
+.textarea-type:focus {
+  outline: none;
 }
 
 .form-div > .register {
