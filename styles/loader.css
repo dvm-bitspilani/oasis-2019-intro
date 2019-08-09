@@ -46,15 +46,6 @@
 .loader > div > div {
   margin: 30vh auto;
 }
-@media all and (max-width: 600px) {
-  .loader > div > div {
-    margin: 20vh auto;
-  }
-
-  .logo {
-    bottom: 15vh;
-  }
-}
 
 @keyframes plasma {
   0% {
@@ -470,7 +461,6 @@
 .logo {
     text-align: center;
     margin: auto;
-    position: absolute;
     left: 0;
     right: 0;
     bottom: 25vh;
@@ -561,3 +551,14 @@
     }
   }
   
+
+
+@media all and (max-width: 600px) {
+  .loader > div > div {
+    margin: 20vh auto;
+  }
+
+  .logo {
+    bottom: 20vh;
+  }
+}
