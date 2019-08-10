@@ -4,6 +4,9 @@
   background: url("../assets/images/landing.png") no-repeat center center/cover;
   opacity: 0;
   transition: 0.5s;
+  position: absolute;
+  z-index: 15;
+  top: 0;
 }
 
 .bottom-div {
@@ -14,7 +17,7 @@
   width: 90%;
   height: 50px;
   margin: auto;
-  z-index: 1;
+  z-index: 20;
   filter: none;
   opacity: 0;
   display: flex;
@@ -92,7 +95,9 @@
   font-family: Haarlem;
   font-size: 1.5rem;
   padding-top: 40px;
-  position: relative;
+  position: absolute;
+  z-index: 20;
+  top: 0;
 }
 .close-nav,
 .open-nav {
@@ -160,7 +165,7 @@
     position: absolute;
     top: 7.5px;
     left: 15px;
-    z-index: 15;
+    z-index: 25;
     cursor: pointer;
   }
   #hamburger > div {
@@ -175,7 +180,7 @@
   .navigation {
     padding-top: 50px;
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     transform: translateX(-100vw);
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     background: rgb(0, 119, 255);
