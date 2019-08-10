@@ -12,7 +12,7 @@
     height: fit-content;
     padding-bottom: 8vh;
     width: 100vw;
-    background: url("../assets/images/video.png") no-repeat center center/cover;
+    background: url("../images/video.jpg") no-repeat center center/cover;
 }
 
 .video-wrapper  .video-heading{
