@@ -9,6 +9,19 @@
   opacity: 0;
   margin-top: 100vh;
 }
+
+@font-face {
+  font-family: "Ikaros-Sans";
+  /* src: url("../fonts/Haarlem\ Deco\ DEMO.ttf"); */
+  src: url("/fonts/Ikaros\ Sans/Ikaros-Regular.otf");
+}
+
+@font-face {
+  font-family: "berlin-sans";
+  /* src: url("../fonts/Haarlem\ Deco\ DEMO.ttf"); */
+  src: url("/fonts/Berlin\ Sans\ FB\ Regular/bsf.ttf");
+}
+
 .content {
   height: 100vh;
   width: 100vw;
@@ -17,7 +30,7 @@
   grid-template-columns: 10vw 10vw 40vw 10vw 10vw 10vw 10vw;
 }
 .about-heading {
-  font-family: Haarlem;
+  font-family: "Ikaros-Sans";
   font-size: 85px;
   grid-row-start: 2;
   grid-column-start: 2;
@@ -34,7 +47,7 @@
 
 .about-text {
   grid-row-start: 4;
-  font-family: sf-reg;
+  font-family: berlin-sans;
   font-size: 23px;
   line-height: 35px;
   word-spacing: 2px;
