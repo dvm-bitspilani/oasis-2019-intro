@@ -124,7 +124,7 @@ function divideToGroups(){
         }
     }
     
-    if(widthScreen < 700){
+    if(widthScreen < 700 & widthScreen > 500){
         displayAll();
         noOfCards = 2;
         group = 1;
