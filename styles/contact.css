@@ -42,6 +42,7 @@
   display: grid;
   grid-template-columns: [col-1] 10% [col-2] 80% [col-3] 10% [col-4] auto [end];
   grid-template-rows: [row-1] 0vw [row-2] 70vh [row-3] auto [end];
+  overflow: hidden;
 }
 
 .Contact-div .Cards-div {
