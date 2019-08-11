@@ -12,14 +12,12 @@
 
 @font-face {
   font-family: "Ikaros-Sans";
-  /* src: url("../fonts/Haarlem\ Deco\ DEMO.ttf"); */
-  src: url("../fonts/Ikaros\ Sans/Ikaros-Regular.otf");
+  src: url("../fonts/Ikaros-Regular.ttf");
 }
 
 @font-face {
   font-family: "berlin-sans";
-  /* src: url("../fonts/Haarlem\ Deco\ DEMO.ttf"); */
-  src: url("../fonts/Berlin\ Sans\ FB\ Regular/bsf.ttf");
+  src: url("../fonts/bsf.ttf");
 }
 
 .content {
