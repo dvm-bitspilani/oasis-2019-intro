@@ -114,7 +114,7 @@
 .nav-item a {
   color: #fff;
   padding: 12px 30px;
-  background-image: linear-gradient(#4e67e2, #4bb4fa);
+  background-image: linear-gradient(#BE4DFF, #4BB4FA);
   border-radius: 35px;
   transition: 0.1s ease;
 }
@@ -154,6 +154,9 @@
     background-size: cover;
   }
 
+  .nav-item a {
+    background-image: linear-gradient(#BE4DFF, #4BB4FA);
+  }
   .mousey {
     display: none;
   }
@@ -243,7 +246,7 @@
   .mobile-register a {
     color: #fff;
     padding: 12px 30px;
-    background-image: linear-gradient(#4e67e2, #4bb4fa);
+    background-image: linear-gradient(#BE4DFF, #4BB4FA);
     border-radius: 35px;
   }
   .nav-item{
