@@ -112,7 +112,7 @@ function backContact(){
 function divideToGroups(){
     if(widthScreen > 966){
         displayAll();
-        noOfCards = 4;
+        noOfCards = 3;
         group = 1;
         noOfGroups = Math.ceil(cardsContact.length/noOfCards);
         console.log(noOfGroups);
