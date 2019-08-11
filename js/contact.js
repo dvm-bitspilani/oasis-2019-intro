@@ -32,51 +32,80 @@ function displayAll(){
 }
 
 function nextContact(){
-
+    console.log("clicked");
+    rightButtonContact.removeEventListener("click",nextContact);
+    setTimeout(function(){
+        rightButtonContact.addEventListener("click",nextContact);        
+    },450);
     if(group < noOfGroups){
         group = group+1;
-    }else{
-        // group = 1;
-    }
-    for(var i=0 ; i < cardsContact.length ; i++){
-        if(i >= (group-1)*noOfCards & i < ((group-1)*noOfCards + noOfCards)){
-            console.log(i);
-            // setTimeout(()=>{
-                cardsContact[i].style.display = "flex"; 
-                // cardsContact[i].style.opacity = 1;
-            // },201);
-            // cardsContact[i].style.transform = "scale(1.05)";    
-            // setTimeout(()=>{
-            // cardsContact[i].style.transform = "scale(1)";
-            // },350);
-        
-        }else{
-            // cardsContact[i].style.opacity = 0;
-            // cardsContact[i].style.transform = "scale(0.5)";
-            // setTimeout(()=>{
-            //     cardsContact[i].style.transform = "scale(1)";
-                cardsContact[i].style.display = "none";
-            // },200);
+        for(var i=0 ; i < cardsContact.length ; i++){
+            if(i >= (group-1)*noOfCards & i < ((group-1)*noOfCards + noOfCards)){
+                console.log(i);
+                setTimeout(()=>{
+                    card.style.display = "flex";
+                },201);
+                let card = cardsContact[i];
+                setTimeout((i)=>{
+                    card.style.opacity = "1";
+                },450);                   
+            }else{         
+                document.getElementsByClassName("Cards-div")[0].style.transform = "scale(0)";
+                let card = cardsContact[i];
+                setTimeout(function(){
+                card.style.display = "none";            
+                document.getElementsByClassName("Cards-div")[0].style.transform = "scale(1)";
+                },200);
+            }
         }
+    }else{
+        // console.log("shake");
+        for(var i=0 ; i < cardsContact.length ; i++){
+            cardsContact[i].style.animation = "shake 0.5s";
+        }
+        setTimeout(()=>{
+            for(var i=0 ; i < cardsContact.length ; i++){
+                cardsContact[i].style.animation = null;
+            }
+        },500);     
     }
     console.log(group);
 }
 
 function backContact(){
-    
+
     if(group > 1){
         group = group - 1;
-    }else{
-        // group = 1;
-    }
-    for(var i=0 ; i < cardsContact.length ; i++){
-        if(i >= (group-1)*noOfCards & i < ((group-1)*noOfCards + noOfCards)){
-            console.log(i);
-            cardsContact[i].style.display = "flex";
-        }else{
-            cardsContact[i].style.display = "none";
+        for(var i=0 ; i < cardsContact.length ; i++){
+            if(i >= (group-1)*noOfCards & i < ((group-1)*noOfCards + noOfCards)){
+                console.log(i);
+                setTimeout(()=>{
+                    card.style.display = "flex";
+                },201);
+                let card = cardsContact[i];
+                setTimeout((i)=>{
+                    card.style.opacity = "1";
+                },450);
+            }else{
+                document.getElementsByClassName("Cards-div")[0].style.transform = "scale(0)";
+                let card = cardsContact[i];
+                setTimeout(function(){
+                card.style.display = "none";            
+                document.getElementsByClassName("Cards-div")[0].style.transform = "scale(1)";
+                },200);
+            }
         }
+    }else{
+        for(var i=0 ; i < cardsContact.length ; i++){
+            cardsContact[i].style.animation = "shake 0.5s";
+        }
+        setTimeout(()=>{
+            for(var i=0 ; i < cardsContact.length ; i++){
+                cardsContact[i].style.animation = null;
+            }
+        },500);  
     }
+ 
     console.log(group);
 }
 
@@ -90,6 +119,7 @@ function divideToGroups(){
         for(var i=0 ; i < cardsContact.length ; i++){
             if(i >= noOfCards ){
                 cardsContact[i].style.display = "none";
+                // cardsContact[i].style.opacity = "0";
             }
         }
     }
