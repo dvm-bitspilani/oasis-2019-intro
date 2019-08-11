@@ -66,7 +66,9 @@ var profpic = [
   "adit.png",
   "DVM.png",
   "pawar.jpg",
-  "tanvi.png"
+  "tanvi.png",
+  "pawar.jpg",
+  "tanvi.png",
 ];
 
 var url = "/images/";
