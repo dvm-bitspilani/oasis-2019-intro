@@ -5,14 +5,14 @@
   
   @font-face {
     font-family: "sf-ui";
-    src: url("../fonts/sf-ui-display-medium-58646be638f96.otf");
+    src: url("../fonts/SF-Pro-Text-Regular.ttf");
 }
 
 .video-wrapper {
     height: fit-content;
     padding-bottom: 8vh;
     width: 100vw;
-    background: url("../images/video.jpg") no-repeat center center/cover;
+    background: url("../assets/images/video.png") no-repeat center center/cover;
 }
 
 .video-wrapper  .video-heading{
@@ -104,7 +104,6 @@
     font-weight: 100;
 }
 .cards-container .info-heading{
-    color: red;
     width: 100%;
     font-size: 2.047vw;
     margin-top: 1.86vw;
@@ -124,12 +123,12 @@
 }
 
 .cards-container a:visited{
-    color: red;
+    color: rgba(243, 32, 250, 1);
     cursor: pointer;
     text-decoration: none;
 }
 .cards-container a:active{
-    color: red;
+    color: rgba(243, 32, 250, 1);
     cursor: pointer;
     text-decoration: none;
 }
@@ -231,7 +230,7 @@
     }
 
     .cards-container .info-heading{
-        color: red;
+        color: rgba(243, 32, 250, 1);
         width: 100%;
         font-size: 6vw;
         margin-top: 4.86vw;
