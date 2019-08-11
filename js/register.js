@@ -1,5 +1,7 @@
 var textarea = document.getElementById("textarea_type");
 var eventlist = document.getElementsByClassName("events_el");
+var msg_box = document.getElementsByClassName("msg-box")[0];
+var close_box = document.getElementsByClassName("close-box")[0];
 var eventsidarr = [];
 var collegeid;
 var gender_value;
@@ -71,6 +73,9 @@ function getyosvalue() {
   console.log(val);
 }
 
+function closebox() {
+  msg_box.style.transform = "translate(-50%) scale(0)";
+}
 function prereg() {
   const name = document.getElementById("name").value;
   //   const gender = document.getElementsByName("gender");
@@ -115,7 +120,10 @@ function prereg() {
       return response.json();
     })
     .then(function(result) {
-      alert(result.message);
+      console.log(result.message);
+      document.getElementsByClassName("inner-text")[0].innerHTML =
+        result.message;
+      msg_box.style.transform = "translate(-50%) scale(1)";
     })
     .catch(function(error) {
       console.log(error);
