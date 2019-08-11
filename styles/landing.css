@@ -108,10 +108,28 @@
 .open-nav {
   display: none;
 }
+
 .mobile-register {
-  display: none;
+  display: block;
+  font-size: 1.1rem;
+  font-family: "sf-ui";
+  /* left: 32.6vw; */
+  margin-left: calc(11.6vw + 292px);
+  position: absolute;
+  bottom: 36vh;
+  z-index: 16;
+  /* left: calc(50vw - 70px); */
 }
+
+.mobile-register a {
+  color: #fff;
+  padding: 12px 30px;
+  background:#0099F7;
+  border-radius: 35px;
+}
+
 .nav-item a {
+  display: none;
   color: #fff;
   padding: 12px 30px;
   background-image: linear-gradient(#BE4DFF, #4BB4FA);
@@ -155,6 +173,8 @@
   }
 
   .nav-item a {
+    display: block;
+    position: initial;
     background-image: linear-gradient(#BE4DFF, #4BB4FA);
   }
   .mousey {

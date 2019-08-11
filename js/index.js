@@ -3,10 +3,11 @@ window.onload = function() {
   let about = document.getElementsByClassName("about")[0];
   let landingWrapper = document.getElementsByClassName("landing-wrapper")[0];
   let navigation = document.getElementsByClassName("navigation")[0];
+  let register = document.getElementsByClassName("mobile-register")[0];
   landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
   about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
   navigation.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
-
+  register.style.transition = "opacity ease-out 0.5s";
   setTimeout(() => {
     document.getElementsByTagName("body")[0].style.overflowY = "auto";
     loader.style.display = "none";
@@ -14,6 +15,7 @@ window.onload = function() {
     landingWrapper.style.opacity = 1;
     about.style.opacity = 1;
     navigation.style.opacity = 1;
+    register.style.opacity = 1;    
     // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
     // document.getElementsByClassName("sidebar")[0].style.display = "flex";
     // if (window.innerWidth > 500)

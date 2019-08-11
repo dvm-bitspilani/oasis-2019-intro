@@ -7,6 +7,9 @@
   color: white;
   text-align: center;
 } */
+.loader_wraper{
+  z-index: 40;
+}
 .loader h1 {
   display: block;
   height: 25px;

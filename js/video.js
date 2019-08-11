@@ -58,7 +58,6 @@ function next(){
         console.log(i);
         // cards[i].style.display = "none";
         cards[i].style.opacity = 0;
-       
     }
     cards[currentCard-1].style.opacity = 1;
         cards[currentCard-1].style.transform = "scale(1.05)";
