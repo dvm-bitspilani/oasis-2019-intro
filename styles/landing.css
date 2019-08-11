@@ -261,12 +261,13 @@
     font-family: "sf-ui";
     position: absolute;
     bottom: 8vh;
-    left: calc(50vw - 70px);
+    margin-left: calc(50vw - 70px);
+    left: 0;
   }
   .mobile-register a {
     color: #fff;
     padding: 12px 30px;
-    background-image: linear-gradient(#BE4DFF, #4BB4FA);
+    /* background-image: linear-gradient(#BE4DFF, #4BB4FA); */
     border-radius: 35px;
   }
   .nav-item{
