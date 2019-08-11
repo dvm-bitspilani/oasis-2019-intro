@@ -256,13 +256,16 @@
     color: #fff;
   }
   .mobile-register {
-    display: block;
+    display: flex;
     font-size: 1.1rem;
     font-family: "sf-ui";
     position: absolute;
     bottom: 8vh;
-    margin-left: calc(50vw - 70px);
-    left: 0;
+    margin-left: initial;
+    /* left: 0; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .mobile-register a {
     color: #fff;
