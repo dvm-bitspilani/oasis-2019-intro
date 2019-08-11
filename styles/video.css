@@ -147,6 +147,15 @@
     align-self: center;
 }
 
+.thumbnail.oasis-teaser{
+    background-image: url('/images/curtain-raiser.png');
+    background-size:cover;
+}
+.thumbnail.oasis-after-movie{
+    background-image: url('/images/after-movies.png');
+    background-size:cover;
+}
+
 @media (max-width: 700px) {
     .video-wrapper > .video-heading{
         height: 100vh;
@@ -220,6 +229,7 @@
         grid-row-start: row-4;
         grid-row-end: row-5;
         text-align: start;
+        border-bottom: none;
     }
     
     .cards-container .cards-right .info{
@@ -228,6 +238,7 @@
         grid-row-start: row-4;
         grid-row-end: row-5;
         text-align: start;
+        border-bottom: none;
     }
     .cards-container .info{
         display: inline-block;

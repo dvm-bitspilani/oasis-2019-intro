@@ -73,6 +73,10 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.oasis-logo-2x{
+  display: none;
+}
 .social-links {
   display: flex;
   position: absolute;
@@ -161,6 +165,10 @@
     padding: 40px;
     width: 60px;
   }
+
+  .social-links i{
+    color: #F320FA;
+  }
   #hamburger {
     display: block;
     position: absolute;
@@ -179,25 +187,46 @@
   }
 
   .navigation {
-    padding-top: 50px;
+    padding-top: 25vw;
     position: absolute;
     z-index: 20;
     transform: translateX(-100vw);
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background: rgb(0, 119, 255);
+    background: #00002E;
     width: 100%;
     height: 100%;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     font-size: 1.4rem;
-    padding: 0;
-    
+    /* padding: 75vh;*/
   }
   .oasis-logo {
-    position: initial;
-    width: 40%;
+    width: 54%;
+    /* height: 15vh; */
+    /* position: inherit; */
+    left: 20vw;
+    bottom: 0vh;
+    top: 80vh;
+    /* margin: auto; */
+    margin-top: 1vh;
+    background: url(../images/oasis-2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
   }
+  /* .oasis-logo-2x{
+    width: 40%;
+    height: 15vh;
+    position: initial;
+    margin-left: 2vw;
+    margin-top: 1vh;
+    background: url("../images/oasis-2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  } */
   .open-nav {
     display: block;
     font-size: 2rem;
@@ -216,6 +245,9 @@
     padding: 12px 30px;
     background-image: linear-gradient(#4e67e2, #4bb4fa);
     border-radius: 35px;
+  }
+  .nav-item{
+    color: #F320FA;
   }
   .nav-item:first-child {
     margin-top: 50px;
