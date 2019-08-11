@@ -255,6 +255,9 @@
     font-size: 2.5em;
   }
 
+  .contact-card-container{
+    width: 80vw;
+  }
   .Contact-div  .Cards-div {
     margin-top: 0vh;
     overflow: scroll;
