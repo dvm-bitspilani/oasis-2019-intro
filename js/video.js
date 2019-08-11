@@ -1,7 +1,7 @@
-var screenWidth = window.innerWidth;
-var cards = document.getElementsByClassName("cards");
-var currentCard = 1;
-var numberOfCards = cards.length;
+let screenWidth = window.innerWidth;
+let cards = document.getElementsByClassName("cards");
+let currentCard = 1;
+let numberOfCards = cards.length;
 
 window.addEventListener("resize",()=> {
     screenWidth = window.innerWidth;
@@ -15,7 +15,7 @@ window.addEventListener("resize",()=> {
         cards[0].style.display = "grid";
     }else{
         // console.log("dssds");
-        for(var i=0; i< cards.length ; i++){
+        for(let i=0; i< cards.length ; i++){
             // cards[i].style.display = "grid";
             cards[i].style.opacity = 1;
             cards[i].style.transform = "scale(1)";
@@ -34,7 +34,7 @@ if(screenWidth < 700){
     cards[currentCard-1].style.display = "grid";
 }else{
     // console.log("dssds");
-    for(var i=0; i< cards.length ; i++){
+    for(let i=0; i< cards.length ; i++){
         // cards[i].style.display = "grid";
         cards[i].style.opacity = 1;
  
@@ -42,8 +42,8 @@ if(screenWidth < 700){
 
 } 
 
-var leftButton = document.getElementsByClassName("arrow-left")[0];
-var rightButton = document.getElementsByClassName("arrow-right")[0];
+let leftButton = document.getElementsByClassName("arrow-left")[0];
+let rightButton = document.getElementsByClassName("arrow-right")[0];
 rightButton.addEventListener("click",next);
 leftButton.addEventListener("click",back);
 
@@ -99,8 +99,8 @@ function keyMove(){
 }
 
 
-var initialX = null;
-var initialY = null;
+let initialX = null;
+let initialY = null;
  
 function startTouch(e) {
   initialX = e.touches[0].clientX;
@@ -116,11 +116,11 @@ function moveTouch(e) {
     return;
   }
  
-  var currentX = e.touches[0].clientX;
-  var currentY = e.touches[0].clientY;
+  let currentX = e.touches[0].clientX;
+  let currentY = e.touches[0].clientY;
  
-  var diffX = initialX - currentX;
-  var diffY = initialY - currentY;
+  let diffX = initialX - currentX;
+  let diffY = initialY - currentY;
  
   if (Math.abs(diffX) > Math.abs(diffY)) {
     // sliding horizontally
