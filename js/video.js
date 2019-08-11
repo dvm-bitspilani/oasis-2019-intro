@@ -88,16 +88,6 @@ function back(){
     },350);
 
 }
-window.addEventListener("keydown", keyMove);
-
-function keyMove(){
-    if (window.event.key == "s" || window.event.key == "a" || window.event.key == "ArrowDown" || window.event.key == "ArrowLeft"){
-       back();
-    } else if(window.event.key == " " || window.event.key == "w" || window.event.key == "d" || window.event.key == "ArrowUp" || window.event.key == "ArrowRight"){
-       next();
-    }
-}
-
 
 let initialX = null;
 let initialY = null;

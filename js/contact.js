@@ -145,7 +145,7 @@ function divideToGroups(){
         console.log(noOfGroups);
         for(var i=0 ; i < cardsContact.length ; i++){
             if(i >= noOfCards ){
-                cardsContact[i].style.display = "none";
+                cardsContact[i].style.display = "none"; 
             }
         }
     }
@@ -156,3 +156,63 @@ window.addEventListener("resize",()=> {
 });
 
 divideToGroups();
+
+window.addEventListener("keydown", keyMove);
+
+function keyMove(){
+    if (window.event.key == "s" || window.event.key == "a" || window.event.key == "ArrowDown" || window.event.key == "ArrowLeft"){
+       backContact();
+    } else if(window.event.key == " " || window.event.key == "w" || window.event.key == "d" || window.event.key == "ArrowUp" || window.event.key == "ArrowRight"){
+       nextContact();
+    }
+}
+
+
+let initialXContact = null;
+let initialYContact = null;
+ 
+function startTouchContact(e) {
+    console.log("start");
+  initialXContact = e.touches[0].clientX;
+  initialYContact = e.touches[0].clientY;
+};
+
+function moveTouchContact(e) {
+   
+  console.log("move");
+
+  if (initialXContact === null) {
+    return;
+  }
+ 
+  if (initialYContact === null) {
+    return;
+  }
+ 
+  let currentX = e.touches[0].clientX;
+  let currentY = e.touches[0].clientY;
+ 
+  let diffX = initialXContact - currentX;
+  let diffY = initialYContact - currentY;
+ 
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    // sliding horizontally
+    if (diffX > 0) {
+      // swiped left
+      nextContact();
+    } else {
+      // swiped right
+      backContact();
+    }  
+  } 
+  initialXContact = null;
+  initialYContact = null;
+   
+  e.preventDefault();
+  
+};
+
+
+document.getElementsByClassName("Contact-div")[0].addEventListener("touchstart", startTouchContact, false);
+document.getElementsByClassName("Contact-div")[0].addEventListener("touchmove", moveTouchContact, false);
+
