@@ -202,6 +202,18 @@
 }
 
 @media (max-width: 768px) {
+  .about {
+    background: url("../../images/mobile-about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .lightning{
+    background: url("../../images/mobile-about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .about-text {
     font-size: 16px;
   }
