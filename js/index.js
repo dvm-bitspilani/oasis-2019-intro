@@ -51,6 +51,8 @@ function toogleNav() {
     document.querySelectorAll("#hamburger > div")[2].style.transform =
       "rotate(-45deg)";
     document.querySelectorAll("#hamburger > div")[1].style.opacity = "0";
+    document.getElementsByTagName('body')[0].style.height = '100vh';
+    document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
   } else {
     isNavOpen = false;
     closeNav();
@@ -59,6 +61,8 @@ function toogleNav() {
     document.querySelectorAll("#hamburger > div")[2].style.transform =
       "rotate(0deg)";
     document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
+    document.getElementsByTagName('body')[0].style.height = 'initial';
+    document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
   }
 }
 
