@@ -170,7 +170,7 @@
         height: 10vh;
         width: 100%;
         padding-left: 0vw;
-        padding-top: 36vh;
+        padding-top: 25vh;
       }
       
     .video-wrapper > .video-heading > span {
@@ -263,6 +263,7 @@
         padding-bottom: 0.19vw;
         letter-spacing: 2px;
         text-decoration: none;
+        text-align: center;
         /* text-underline-position: under;  */
     }
 

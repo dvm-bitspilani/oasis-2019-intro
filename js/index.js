@@ -6,8 +6,10 @@ window.onload = function() {
   let register = document.getElementsByClassName("mobile-register")[0];
   landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
   about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
-  navigation.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+  navigation.style.transition = "ease-out 0.5s"; // fade-in effect for content on loading
   register.style.transition = "opacity ease-out 0.5s";
+  document.getElementById('hamburger').style.transition = "opacity ease-out 0.5s";
+  document.getElementsByClassName('mobile-register')[0].style.transition = "opacity ease-out 0.5s";
   setTimeout(() => {
     document.getElementsByTagName("body")[0].style.overflowY = "auto";
     loader.style.display = "none";
@@ -15,7 +17,9 @@ window.onload = function() {
     landingWrapper.style.opacity = 1;
     about.style.opacity = 1;
     navigation.style.opacity = 1;
-    register.style.opacity = 1;    
+    register.style.opacity = 1;
+    document.getElementById('hamburger').style.opacity = 1
+    document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
     // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
     // document.getElementsByClassName("sidebar")[0].style.display = "flex";
     // if (window.innerWidth > 500)
@@ -80,4 +84,9 @@ var url = "images/";
 
 for (var i = 0; i < document.getElementsByClassName("prof-pic").length; i++) {
   document.getElementsByClassName("prof-pic")[i].src = url + profpic[i];
+}
+
+window.onbeforeunload = function() {
+  alert('reload')
+  window.scrollTo(0,0);
 }

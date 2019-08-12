@@ -198,6 +198,7 @@
   align-self: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .arrow-right-contact {
   display: flex;
@@ -213,6 +214,7 @@
   align-self: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .arrow-left-contact > div.image {
   border-radius: 50%;
