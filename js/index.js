@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 window.onload = function() {
   let loader = document.getElementsByClassName("loader")[0];
   let about = document.getElementsByClassName("about")[0];
@@ -28,6 +29,30 @@ window.onload = function() {
     //   document.getElementsByClassName("navigator")[0].style.display = "none";
     // }
   }, 4500);
+=======
+const scroll = ['home', 'about', 'videos', 'contacts']
+
+window.onload = function() {  
+    let loader = document.getElementsByClassName("loader")[0];
+    let about = document.getElementsByClassName("about")[0];
+    let landingWrapper = document.getElementsByClassName("landing-wrapper")[0];
+    landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+    about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+  
+    setTimeout(() => {
+      document.getElementsByTagName('body')[0].style.overflowY = 'auto';
+      loader.style.display="none";
+      landingWrapper.style.opacity = 1;
+      about.style.opacity = 1;
+      // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
+      // document.getElementsByClassName("sidebar")[0].style.display = "flex";
+      // if (window.innerWidth > 500)
+      //   document.getElementsByClassName("navigator")[0].style.display = "flex";
+      // if (window.innerWidth < 500) {
+      //   document.getElementsByClassName("navigator")[0].style.display = "none";
+      // }
+    }, 4500);
+>>>>>>> Stashed changes
 };
 
 let hue = 0;
@@ -63,6 +88,16 @@ function toogleNav() {
     document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
     document.getElementsByTagName('body')[0].style.height = 'initial';
     document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+  }
+}
+
+function navigate(x) {
+  location.hash = scroll[x];
+  if(document.documentElement.scrollWidth < 500){
+    closeNav();
+    document.querySelectorAll("#hamburger > div")[0].style.transform="rotate(0deg)";
+    document.querySelectorAll("#hamburger > div")[2].style.transform="rotate(0deg)";
+    document.querySelectorAll("#hamburger > div")[1].style.opacity="1";
   }
 }
 
