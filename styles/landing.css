@@ -272,7 +272,7 @@
   .mobile-register a {
     color: #fff;
     padding: 12px 30px;
-    /* background-image: linear-gradient(#BE4DFF, #4BB4FA); */
+    background-image: linear-gradient(#BE4DFF, #4BB4FA);
     border-radius: 35px;
   }
   .nav-item{

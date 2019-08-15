@@ -39,8 +39,6 @@ setInterval(() => {
   document.getElementsByClassName("landing-wrapper")[0].style.transition = "1s";
   document.querySelectorAll(".landing-wrapper")[0].style.filter =
     "hue-rotate(" + hue + "deg)";
-  
-  
 }, 5000);
 
 var nav = document.getElementsByClassName("navigation")[0];
