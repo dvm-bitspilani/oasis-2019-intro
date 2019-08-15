@@ -12,14 +12,6 @@ let leftButtonContact = document.getElementsByClassName("arrow-left-contact")[0]
 let rightButtonContact = document.getElementsByClassName("arrow-right-contact")[0];
 rightButtonContact.addEventListener("click",nextContact);
 leftButtonContact.addEventListener("click",backContact);
-// console.log(noOfCards);
-
-// for(var i=0 ; i < cards.length ; i++){
-//     if(i > noOfCards){
-//         cards[0].style.display = "none";
-//     }
-// }
-
 let widthScreen = window.innerWidth;
 console.log(widthScreen);
 
@@ -215,4 +207,3 @@ function moveTouchContact(e) {
 
 document.getElementsByClassName("Contact-div")[0].addEventListener("touchstart", startTouchContact, false);
 document.getElementsByClassName("Contact-div")[0].addEventListener("touchmove", moveTouchContact, false);
-
