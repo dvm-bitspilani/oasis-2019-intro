@@ -6,6 +6,11 @@ var eventsidarr = [];
 var collegeid;
 var gender_value;
 var yos;
+var i = 0;
+
+// document.getElementsByClassName('selected_el')[0].onclick = function() {
+//   console.log(1);
+// }
 
 window.onload = function() {
   const college_select = document.getElementById("city_opt");
@@ -39,8 +44,8 @@ window.onload = function() {
           opt.classList.add("events_el");
           opt.innerHTML = response[i].events[j].name;
           opt.onclick = function() {
-            console.log(this.textContent);
-            console.log(this.id);
+            // console.log(this.textContent);
+            // console.log(this.id);
             this.style.opacity = "0.1";
             eventsidarr.push(parseInt(this.id));
             console.log(eventsidarr);
@@ -95,7 +100,12 @@ function prereg() {
   const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
-
+  var v = grecaptcha.getResponse();
+  console.log(v);
+  if(v == ''){
+    alert('Please select Captcha');
+    return
+  }
   data = {
     email_id: email,
     name: name,
@@ -104,7 +114,8 @@ function prereg() {
     year: yos_value,
     phone: phone,
     college_id: collegeid,
-    events: eventsidarr
+    events: eventsidarr,
+    captcha : v
   };
   console.log(data);
 
