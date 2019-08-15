@@ -125,7 +125,8 @@
 .mobile-register a {
   color: #fff;
   padding: 16px 48px;
-  background:#0099F7;
+  background-image: linear-gradient(#be4dff, #4bb4fa);
+  box-shadow: 0 0 35px #be4dff;
   border-radius: 35px;
 }
 
@@ -272,7 +273,8 @@
   .mobile-register a {
     color: #fff;
     padding: 12px 30px;
-    background-image: linear-gradient(#BE4DFF, #4BB4FA);
+    background-image: linear-gradient(#be4dff, #4bb4fa);
+    box-shadow: 0 0 35px #be4dff;
     border-radius: 35px;
   }
   .nav-item{
