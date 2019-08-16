@@ -1,32 +1,37 @@
-.spons-wrapper{
+.spons-wrapper {
     height: 100vh;
     padding-bottom: 6vh;
-    width: 100vw;
+    width: 100%;
     background: url('../images/sponsors.png') no-repeat center center/cover;
     overflow: hidden;
-    /* position: absolute; */
-    top:0;
+    position: absolute;
+    top: 0;
+    z-index: 19;
+    transition: 0.5s;
+    opacity: 0;
+    display: none;
 }
-.spons-heading{
+
+.spons-heading {
     height: 10vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vw;
-    margin-top: 4vw;
+    margin-bottom: 5vh;
+    margin-top: 15vh;
     /* padding-left: 25vw; */
 }
 
-.spons-wrapper span{
+.spons-wrapper span {
     color: white;
-    font-size: 6vw;
+    font-size: 6rem;
     font-family: "Ikaros-Sans";
     letter-spacing: 5px;
     position: relative;
 }
 
-.spons-wrapper .spons-heading span::after{
+.spons-wrapper .spons-heading span::after {
     position: absolute;
     left: 90%;
     bottom: 0;
@@ -37,18 +42,19 @@
     border-bottom: 2px solid #768ad9;
 }
 
-.spons-container{
+.spons-container {
     width: 80%;
     height: 66%;
     overflow-y: scroll;
     margin: 0 auto;
 }
 
-.sponsor{
+.sponsor {
     width: 100%;
     margin-bottom: 3vw;
 }
-.sponsor-heading{
+
+.sponsor-heading {
     width: 100%;
     height: 4vw;
     text-align: center;
@@ -57,52 +63,44 @@
     text-decoration: underline;
 }
 
-.sponsor-card-container{
+.sponsor-card-container {
     width: 100%;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
 }
 
-.sponsor-card-container .spons-details{
-   width:21.7vw;
-   margin: 2vw;
+.sponsor-card-container .spons-details {
+    width: 21.7vw;
+    margin: 2vw;
 }
-.sponsor-card-container .spons-details .name{
+
+.sponsor-card-container .spons-details .name {
     width: 100%;
     font-size: 1.75vw;
     height: 2vw;
     font-family: "Ikaros-Sans";
     text-align: center;
 }
-.sponsor-card-container img{
-  width: 21.7vw;
-  /* height: 15.5vw; */
+
+.sponsor-card-container img {
+    width: 21.7vw;
+    /* height: 15.5vw; */
 }
 
-@media (max-width: 600px){
-
-    .spons-wrapper{
+@media (max-width: 600px) {
+    .spons-wrapper {
         padding-bottom: 0vh;
         background: url('../images/sponsors.png') no-repeat center center/cover;
     }
-    .spons-heading{
-        /* height: 10vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5vw;
-        margin-top: 4vw; */
-        /* padding-left: 25vw; */
+    .spons-heading {
+        margin-top: 10vh;
     }
-    
-    .spons-wrapper span{
+    .spons-wrapper span {
         font-size: 6vh;
     }
-    
-    .spons-wrapper .spons-heading span::after{
+    .spons-wrapper .spons-heading span::after {
         position: absolute;
         left: 90%;
         bottom: 0;
@@ -112,51 +110,45 @@
         width: 20%;
         border-bottom: 2px solid #768ad9;
     }
-    
-    .spons-container{
+    .spons-container {
         width: 80%;
         height: 66%;
         overflow-y: scroll;
         margin: 0 auto;
     }
-    
-    .sponsor{
+    .sponsor {
         width: 100%;
         margin-bottom: 3vw;
     }
-    .sponsor-heading{
+    .sponsor-heading {
         height: 3vh;
         font-size: 3vh;
         margin-bottom: 3vh;
     }
-    
-    .sponsor-card-container{
+    .sponsor-card-container {
         width: 100%;
-        display:flex;
+        display: flex;
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    
-    .sponsor-card-container .spons-details{
+    .sponsor-card-container .spons-details {
         width: 100%;
         font-size: 4.75vw;
-        height: 2vw;
         font-family: "Ikaros-Sans";
         text-align: center;
         height: fit-content;
         margin-bottom: 7vh;
     }
-    .sponsor-card-container .spons-details .name{
+    .sponsor-card-container .spons-details .name {
         width: 100%;
         font-size: 4.75vw;
-        height: 2vw;
         font-family: "Ikaros-Sans";
         text-align: center;
         padding-top: 1.5vh;
     }
-    .sponsor-card-container img{
+    .sponsor-card-container img {
         width: 48.7vw;
         /* height: 35.5vw; */
         /* background: url('/images/spons/atkt.png');
@@ -164,5 +156,4 @@
         background-repeat-y: no-repeat;
         background-position-y: center; */
     }
-
 }

@@ -1,248 +1,253 @@
 .landing-wrapper {
-  height: 100vh;
-  width: 100vw;
-  background: url("../images/landing.jpg") no-repeat center center/cover;
-  opacity: 0;
-  transition: 0.5s;
-  position: absolute;
-  z-index: 15;
-  top: 0;
+    height: 100vh;
+    width: 100%;
+    background: url("../images/landing.jpg") no-repeat center center/cover;
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    z-index: 15;
+    top: 0;
 }
 
 .bottom-div {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 50px;
-  margin: auto;
-  z-index: 20;
-  filter: none;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1vh;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    z-index: 20;
+    filter: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
 }
 
 .mousey {
-  width: 3px;
-  padding: 6px 10px;
-  height: 25px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  opacity: 0.75;
-  box-sizing: content-box;
+    width: 3px;
+    padding: 6px 10px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
 }
+
 .scroller {
-  width: 3px;
-  height: 10px;
-  border-radius: 25%;
-  background-color: #fff;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  animation-iteration-count: infinite;
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-iteration-count: infinite;
 }
 
 @keyframes scroll {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(15px);
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
 }
 
 .oasis-logo {
-  width: 15vw;
-  height: 15vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: 2vw;
-  margin-top: 1vh;
-  background: url("../images/oasis-2.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.oasis-logo-2x{
-  display: none;
-}
-.social-links {
-  display: flex;
-  position: absolute;
-  top: 95vh;
-  left: 2vw;
-  color: white;
-  justify-content: space-between;
-  width: 80px;
-}
-.fa-instagram :before {
-  content: "";
-}
-.fab {
-  color: white;
-}
-.navigation {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  font-family: "Ikaros-Sans";
-  font-size: 1.5rem;
-  padding-top: 40px;
-  position: absolute;
-  z-index: 20;
-  top: 0;
-  opacity: 0;
-}
-.close-nav,
-.open-nav {
-  display: none;
-}
-
-.mobile-register {
-  display: block;
-  font-size: 1.75rem;
-  font-family: "sf-ui";
-  /* left: 32.6vw; */
-  margin-left: calc(11vw + 260px);
-  position: absolute;
-  bottom: 20vh;
-  z-index: 16;
-  /* left: calc(50vw - 70px); */
-  opacity: 0;
-}
-
-.mobile-register a {
-  color: #fff;
-  padding: 16px 48px;
-  background-image: linear-gradient(#be4dff, #4bb4fa);
-  box-shadow: 0 0 35px #be4dff;
-  border-radius: 35px;
-}
-
-.nav-item a {
-  display: none;
-  color: #fff;
-  padding: 12px 30px;
-  background-image: linear-gradient(#BE4DFF, #4BB4FA);
-  border-radius: 35px;
-  transition: 0.1s ease;
-}
-.nav-item a:hover {
-  box-shadow: 0 0 15px #00ffff;
-}
-.nav-item {
-  color: white;
-  padding: 20px;
-  cursor: pointer;
-  transition: 0.5s;
-  letter-spacing: 3px;
-}
-.nav-item:last-child {
-  margin-right: 70px;
-}
-
-.nav-item:hover {
-  text-shadow: 0 0 20px #00ffff;
-}
-
-.oasis-landing {
-  background: url("../assets/images/oasist.png") no-repeat center center/cover;
-  width: 750px;
-  height: 400px;
-  margin-top: 25vh;
-  margin-left: 11vw;
-}
-
-#hamburger {
-  display: none;
-}
-
-@media all and (max-width: 500px) {
-  .landing-wrapper {
-    background: url("../assets/images/landing-mobile.png");
-    background-size: cover;
-  }
-
-  .nav-item a {
-    display: block;
-    position: initial;
-    background-image: linear-gradient(#BE4DFF, #4BB4FA);
-  }
-  .mousey {
-    display: none;
-  }
-
-  .social-links {
-    position: relative;
-    top: 0;
+    width: 15vw;
+    height: 15vh;
+    position: absolute;
     left: 0;
-    padding: 40px;
-    width: 60px;
-  }
-
-  .social-links i{
-    color: #F320FA;
-  }
-  #hamburger {
-    display: block;
-    position: absolute;
-    top: 7.5px;
-    left: 15px;
-    z-index: 25;
-    cursor: pointer;
-    opacity: 0;
-  }
-  #hamburger > div {
-    width: 40px;
-    height: 5px;
-    margin: 9px 0;
-    background-color: white;
-    transform-origin: left;
-    transition: 0.35s;
-  }
-
-  .navigation {
-    padding-top: 25vw;
-    position: absolute;
-    z-index: 20;
-    transform: translateX(-100vw);
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    background: #00002E;
-    width: 100%;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    font-size: 1.4rem;
-    /* padding: 75vh;*/
-  }
-  .oasis-logo {
-    width: 54%;
-    /* height: 15vh; */
-    /* position: inherit; */
-    left: 20vw;
-    bottom: 0vh;
-    top: 80vh;
-    /* margin: auto; */
+    top: 0;
+    margin-left: 2vw;
     margin-top: 1vh;
-    background: url(../images/oasis-2.png);
+    background: url("../images/oasis-2.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.oasis-logo-2x {
     display: none;
-  }
-  /* .oasis-logo-2x{
+}
+
+.social-links {
+    display: flex;
+    position: absolute;
+    top: 95vh;
+    left: 2vw;
+    color: white;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.fa-instagram :before {
+    content: "";
+}
+
+.fab {
+    color: white;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    font-family: "Ikaros-Sans";
+    font-size: 1.5rem;
+    padding-top: 40px;
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    opacity: 0;
+}
+
+.close-nav,
+.open-nav {
+    display: none;
+}
+
+.mobile-register {
+    display: block;
+    font-size: 1.75rem;
+    font-family: "sf-ui";
+    /* left: 32.6vw; */
+    margin-left: calc(11vw + 260px);
+    position: absolute;
+    bottom: 20vh;
+    z-index: 16;
+    /* left: calc(50vw - 70px); */
+    opacity: 0;
+}
+
+.mobile-register a {
+    color: #fff;
+    padding: 16px 48px;
+    background-image: linear-gradient(#be4dff, #4bb4fa);
+    box-shadow: 0 0 35px #be4dff;
+    border-radius: 35px;
+}
+
+.nav-item a {
+    display: none;
+    color: #fff;
+    padding: 12px 30px;
+    background-image: linear-gradient(#BE4DFF, #4BB4FA);
+    border-radius: 35px;
+    transition: 0.1s ease;
+}
+
+.nav-item a:hover {
+    box-shadow: 0 0 15px #00ffff;
+}
+
+.nav-item {
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 3px;
+}
+
+.nav-item:last-child {
+    margin-right: 70px;
+}
+
+.nav-item:hover {
+    text-shadow: 0 0 20px #00ffff;
+}
+
+.oasis-landing {
+    background: url("../assets/images/oasist.png") no-repeat center center/cover;
+    width: 750px;
+    height: 400px;
+    margin-top: 25vh;
+    margin-left: 11vw;
+}
+
+#hamburger {
+    display: none;
+}
+
+@media all and (max-width: 500px) {
+    .landing-wrapper {
+        background: url("../assets/images/landing-mobile.jpg");
+        background-size: 100% 100%;
+    }
+    .nav-item a {
+        display: block;
+        position: initial;
+        background-image: linear-gradient(#BE4DFF, #4BB4FA);
+    }
+    .mousey {
+        display: none;
+    }
+    .social-links {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 40px;
+        width: 60px;
+    }
+    .social-links i {
+        color: #F320FA;
+    }
+    #hamburger {
+        display: block;
+        position: absolute;
+        top: 7.5px;
+        left: 15px;
+        z-index: 25;
+        cursor: pointer;
+        opacity: 0;
+    }
+    #hamburger>div {
+        width: 40px;
+        height: 5px;
+        margin: 9px 0;
+        background-color: white;
+        transform-origin: left;
+        transition: 0.35s;
+    }
+    .navigation {
+        padding-top: 25vw;
+        position: absolute;
+        z-index: 20;
+        transform: translateX(-100vw);
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        background: #00002E;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.4rem;
+        /* padding: 75vh;*/
+    }
+    .oasis-logo {
+        width: 54%;
+        /* height: 15vh; */
+        /* position: inherit; */
+        left: 20vw;
+        bottom: 0vh;
+        top: 80vh;
+        /* margin: auto; */
+        margin-top: 1vh;
+        background: url(../images/oasis-2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: none;
+    }
+    /* .oasis-logo-2x{
     width: 40%;
     height: 15vh;
     position: initial;
@@ -253,43 +258,43 @@
     background-size: contain;
     background-repeat: no-repeat;
   } */
-  .open-nav {
-    display: block;
-    font-size: 2rem;
-    color: #fff;
-  }
-  .mobile-register {
-    display: flex;
-    font-size: 1.1rem;
-    font-family: "sf-ui";
-    position: absolute;
-    bottom: 8vh;
-    margin-left: initial;
-    /* left: 0; */
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  .mobile-register a {
-    color: #fff;
-    padding: 12px 30px;
-    background-image: linear-gradient(#be4dff, #4bb4fa);
-    box-shadow: 0 0 35px #be4dff;
-    border-radius: 35px;
-  }
-  .nav-item{
-    color: #F320FA;
-  }
-  .nav-item:first-child {
-    margin-top: 50px;
-  }
-  .nav-item:last-child {
-    margin-right: 0;
-  }
-  .oasis-landing {
-    width: 100%;
-    height: 370px;
-    margin: 0;
-    background-size: 100% 45%;
-  }
+    .open-nav {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+    }
+    .mobile-register {
+        display: flex;
+        font-size: 1.1rem;
+        font-family: "sf-ui";
+        position: absolute;
+        bottom: 8vh;
+        margin-left: initial;
+        /* left: 0; */
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-register a {
+        color: #fff;
+        padding: 12px 30px;
+        background-image: linear-gradient(#be4dff, #4bb4fa);
+        box-shadow: 0 0 35px #be4dff;
+        border-radius: 35px;
+    }
+    .nav-item {
+        color: #F320FA;
+    }
+    .nav-item:first-child {
+        margin-top: 50px;
+    }
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    .oasis-landing {
+        width: 100%;
+        height: 370px;
+        margin: 0;
+        background-size: 100% 45%;
+    }
 }
