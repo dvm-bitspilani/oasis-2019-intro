@@ -61,6 +61,7 @@
     font-family: "Ikaros-Sans";
     font-size: 2em;
     text-decoration: underline;
+    color: white;
 }
 
 .sponsor-card-container {
@@ -82,6 +83,7 @@
     height: 2vw;
     font-family: "Ikaros-Sans";
     text-align: center;
+    color: white;
 }
 
 .sponsor-card-container img {
