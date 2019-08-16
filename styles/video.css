@@ -153,12 +153,12 @@
 }
 
 .thumbnail.oasis-teaser {
-    background-image: url('../images/curtain-raiser.png');
+    background-image: url('../images/curtain-raiser.jpg');
     background-size: cover;
 }
 
 .thumbnail.oasis-after-movie {
-    background-image: url('../images/after-movies.png');
+    background-image: url('../images/after-movies.jpg');
     background-size: cover;
 }
 
