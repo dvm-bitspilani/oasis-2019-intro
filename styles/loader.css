@@ -532,11 +532,12 @@
 }
 
 .logo {
+    margin-left: 5%;
     text-align: center;
     margin: auto;
     left: 0;
     right: 0;
-    bottom: 25vh;
+    bottom: 20vh;
     font: 7.5vh "nobel gas";
     color: #fee;
     text-shadow: 0 -10px 25px, 0 0 2px, 0 0 1em #9900ff, 0 0 0.5em #9900ff, 0 0 0.1em #9900ff, 0 10px 3px #000;
