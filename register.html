@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="msg-box">
-      <span class="inner-text">Some Text</span>
+      <span class="inner-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit suscipit quaerat unde magni architecto adipisci blanditiis, necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit assumenda quod rerum, minus explicabo consectetur!</span>
       <div class="close-box" onclick="closebox()">OK</div>
     </div>
     <div class="form-div">
@@ -87,11 +87,13 @@
           <input type="text" placeholder="City *" class="text-type" id="city" />
         </div>
         <div class="input-el">
-          <div class="select-wrapper" id="events_opt">
-            <span>Events</span>
-            <br />
-          </div>
-          <input
+          <div class="select-wrapper">
+            <select id="events_opt" class="select-input" onchange="geteventsvalue()">
+            <option value="" selected disabled>Select your Events</option>
+            </select>
+        </div>
+        <div class="selected-events"></div>
+        <input
             type="email"
             placeholder="Email *"
             class="text-type"

@@ -2,15 +2,49 @@ var textarea = document.getElementById("textarea_type");
 var eventlist = document.getElementsByClassName("events_el");
 var msg_box = document.getElementsByClassName("msg-box")[0];
 var close_box = document.getElementsByClassName("close-box")[0];
+var selected_events = document.getElementsByClassName('selected-events')[0];
 var eventsidarr = [];
 var collegeid;
 var gender_value;
 var yos;
 var i = 0;
+var no_of_events;
 
 // document.getElementsByClassName('selected_el')[0].onclick = function() {
 //   console.log(1);
 // }
+
+function geteventsvalue() {
+  const val = document.getElementById("events_opt").value;
+  const sports_id = document.getElementById("events_opt")[
+    document.getElementById("events_opt").selectedIndex
+  ].id;
+  var div = document.createElement("div");
+  div.className += "sports";
+  var span = document.createElement("span");
+  span.className += "sports-name";
+  span.innerHTML = val;
+  div.appendChild(span);
+  selected_events.appendChild(div);
+  div.onclick = function() {
+    this.parentNode.removeChild(this);
+    const x = this.getElementsByTagName('span');
+    console.log(x[0].innerHTML);
+    console.log(document.getElementsByClassName('sports-tag')[5])
+    for(var i =1;i<document.getElementsByClassName('sports-tag').length;i++){
+      if(x[0].innerHTML == document.getElementsByClassName('sports-tag')[i].innerHTML){
+      document.getElementsByClassName('sports-tag')[i].disabled = false;
+      }
+    }
+  };
+ document.getElementById("events_opt").options[
+    document.getElementById("events_opt").selectedIndex
+  ].disabled = true;
+  console.log(val);
+  console.log(sports_id);
+  eventsidarr.push(parseInt(sports_id));
+  console.log(eventsidarr);
+}
 
 window.onload = function() {
   const college_select = document.getElementById("city_opt");
@@ -39,18 +73,16 @@ window.onload = function() {
       for (var i = 0; i < response.length; i++) {
         for (var j = 0; j < response[i].events.length; j++) {
           console.log(response[i].events[j].name);
-          var opt = document.createElement("p");
-          opt.setAttribute("id", response[i].events[j].id);
-          opt.classList.add("events_el");
-          opt.innerHTML = response[i].events[j].name;
-          opt.onclick = function() {
-            // console.log(this.textContent);
-            // console.log(this.id);
-            this.style.opacity = "0.1";
-            eventsidarr.push(parseInt(this.id));
-            console.log(eventsidarr);
-          };
-          events_select.appendChild(opt);
+            var opt = document.createElement("option");
+            opt.value = response[i].events[j].name;
+            opt.innerHTML = response[i].events[j].name;
+            opt.setAttribute("id", response[i].events[j].id);
+            opt.className += 'sports-tag';
+            opt.onclick = function(){
+              console.log(1);
+            }
+            events_select.appendChild(opt);
+            no_of_events++;
         }
       }
     })

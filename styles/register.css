@@ -33,7 +33,12 @@ body {
   font-family: sf-ui;
   font-size: 2em;
   transform: translate(-50%) scale(0);
+  padding: 0 5% 0 5%;
   transition: all 0.5s ease-in-out;
+}
+
+.msg-box > span{
+  text-align: center;
 }
 
 .msg-box > .close-box {
@@ -147,23 +152,36 @@ select:focus {
   margin: 2vh;
 }
 
-.select-wrapper:nth-child(1) {
-  width: 60%;
-  height: 45%;
-  padding: 3%;
+.selected-events {
+  width: 64%;
+  height: 5%;
   background-color: #02021b;
-  border: 3px solid #2263c1;
-  border-radius: 5px;
-  color: #797777;
-  font-family: SFpro;
-  letter-spacing: 2px;
-  font-size: 1.5em;
-  overflow: auto;
+  padding: 2% 2% 2% 2%;
+  border-radius: 40px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1em;
+  font-family: sf-ui;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
 }
 
-.select-wrapper:nth-child(1) > span {
-  border-bottom: 1px solid #797777;
-  padding-bottom: 1%;
+.sports {
+  width: auto;
+  padding: 2% 2% 2% 2%;
+  height: 40%;
+  background-color: #02021b;
+  border-radius: 40px;
+  margin-left: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cbcbcb;
+  border: solid 1px #2263c1;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
 .textarea-type:focus {
