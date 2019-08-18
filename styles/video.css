@@ -9,6 +9,17 @@
     font-weight: 100;
 }
 
+@font-face {
+    font-family: "lucida";
+    src: url("../fonts/lucida\ sans\ unicode.ttf");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Ikaros-Sans";
+    src: url("../../fonts/IR.otf");
+}
+
 .video-wrapper {
     height: 100vh;
     padding-bottom: 6vh;
@@ -94,7 +105,7 @@
     grid-row-start: row-1;
     grid-row-end: row-2;
     text-align: center;
-    border-bottom: rgba(243, 32, 250, 1) 3px solid;
+    border-bottom: #768ad9 3px solid;
 }
 
 .cards-container .cards-right .info {
@@ -103,12 +114,12 @@
     grid-row-start: row-1;
     grid-row-end: row-2;
     text-align: center;
-    border-bottom: rgba(243, 32, 250, 1) 3px solid;
+    border-bottom: #768ad9 3px solid;
 }
 
 .cards-container .info {
     display: inline-block;
-    font-family: "sf-ui";
+    font-family: 'Ikaros-Sans';    
     font-size: 1.240vw;
     color: white;
     font-weight: 100;
@@ -120,7 +131,7 @@
     margin-top: 1.86vw;
     margin-bottom: 0.93vw;
     padding-bottom: 0.19vw;
-    letter-spacing: 3.18px;
+    letter-spacing: 1.18px;
 }
 
 .arrow-right {
@@ -129,6 +140,11 @@
 
 .arrow-left {
     display: none;
+}
+
+.cards-container a{
+    color: white;
+    text-shadow: 0 0 25px #768ad9;
 }
 
 .cards-container a:visited {
