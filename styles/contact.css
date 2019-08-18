@@ -173,7 +173,7 @@
     height: 5vh;
     border-top: 2px solid #ffffff;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 

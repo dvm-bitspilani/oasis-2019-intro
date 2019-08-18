@@ -36,3 +36,12 @@ a:hover {
     font-family: 'nobel gas';
     src: url('../fonts/NobleGaslights.otf');
 }
+
+@font-face {
+    font-family: 'google sans';
+    src: url('../fonts/ProductSans-Medium.woff');
+}
+
+html {
+    overflow: hidden;
+}

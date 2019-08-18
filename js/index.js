@@ -7,7 +7,7 @@ window.onload = function() {
     let register = document.getElementsByClassName("mobile-register")[0];
     landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
     about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
-    navigation.style.transition = "ease-out 0.5s"; // fade-in effect for content on loading
+    navigation.style.transition = "ease-in-out 0.5s"; // fade-in effect for content on loading
     register.style.transition = "opacity ease-out 0.5s";
     document.getElementById('hamburger').style.transition = "opacity ease-out 0.5s";
     document.getElementsByClassName('mobile-register')[0].style.transition = "opacity ease-out 0.5s";
@@ -21,6 +21,7 @@ window.onload = function() {
         register.style.opacity = 1;
         document.getElementById('hamburger').style.opacity = 1
         document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
+        document.getElementsByTagName('html')[0].style.overflowY = 'auto';
         // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
         // document.getElementsByClassName("sidebar")[0].style.display = "flex";
         // if (window.innerWidth > 500)
@@ -42,31 +43,6 @@ setInterval(() => {
 }, 5000);
 
 var nav = document.getElementsByClassName("navigation")[0];
-var isNavOpen = false;
-
-function toogleNav() {
-    if (!isNavOpen) {
-        isNavOpen = true;
-        openNav();
-        document.querySelectorAll("#hamburger > div")[0].style.transform =
-            "rotate(45deg)";
-        document.querySelectorAll("#hamburger > div")[2].style.transform =
-            "rotate(-45deg)";
-        document.querySelectorAll("#hamburger > div")[1].style.opacity = "0";
-        document.getElementsByTagName('body')[0].style.height = '100vh';
-        document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
-    } else {
-        isNavOpen = false;
-        closeNav();
-        document.querySelectorAll("#hamburger > div")[0].style.transform =
-            "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[2].style.transform =
-            "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
-        document.getElementsByTagName('body')[0].style.height = 'initial';
-        document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
-    }
-}
 
 function navigate(x) {
     var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
@@ -83,18 +59,19 @@ function navigate(x) {
     window.scrollTo(0, window.innerHeight * x)
     if (document.documentElement.scrollWidth < 500) {
         closeNav();
-        document.querySelectorAll("#hamburger > div")[0].style.transform = "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[2].style.transform = "rotate(0deg)";
-        document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
     }
 }
 
 function openNav() {
     nav.style.transform = "translateX(0)";
+    document.getElementsByTagName('html')[0].style.height = '100vh';
+    document.getElementsByTagName('html')[0].style.overflowY = 'hidden';
 }
 
 function closeNav() {
     nav.style.transform = "translateX(-100vw)";
+    document.getElementsByTagName('html')[0].style.height = 'initial';
+    document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
 }
 
 var profpic = [
@@ -115,7 +92,6 @@ for (var i = 0; i < document.getElementsByClassName("prof-pic").length; i++) {
 }
 
 window.onbeforeunload = function() {
-    alert('reload')
     window.scrollTo(0, 0);
 }
 

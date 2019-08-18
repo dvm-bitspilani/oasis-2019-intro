@@ -1,7 +1,8 @@
 .spons-wrapper {
-    height: 100vh;
+    height: 94vh;
     padding-bottom: 6vh;
     width: 100%;
+    background-color: #ffffff;
     background: url('../images/sponsors.png') no-repeat center center/cover;
     overflow: hidden;
     position: absolute;
@@ -93,6 +94,7 @@
 
 @media (max-width: 600px) {
     .spons-wrapper {
+        height: 100vh;
         padding-bottom: 0vh;
         background: url('../images/sponsors.png') no-repeat center center/cover;
     }
