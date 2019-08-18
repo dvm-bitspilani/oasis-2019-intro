@@ -23,7 +23,7 @@ body {
   position: absolute;
   height: 50vh;
   width: 50vw;
-  background-color: #ffffff;
+  background-color: rgba(0,0,0,0.9);
   margin-top: 10vh;
   left: 50%;
   display: flex;
@@ -39,6 +39,8 @@ body {
 
 .msg-box > span{
   text-align: center;
+  color: #ffffff;
+  font-size: 0.7em;
 }
 
 .msg-box > .close-box {
