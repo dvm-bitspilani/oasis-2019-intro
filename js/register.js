@@ -34,6 +34,13 @@ function geteventsvalue() {
     for(var i =1;i<document.getElementsByClassName('sports-tag').length;i++){
       if(x[0].innerHTML == document.getElementsByClassName('sports-tag')[i].innerHTML){
       document.getElementsByClassName('sports-tag')[i].disabled = false;
+      for(var j = 0;j<eventsidarr.length;j++){
+        if(eventsidarr[j] == parseInt(document.getElementsByClassName('sports-tag')[i].id)){
+          eventsidarr.splice(j,1);
+          j--;
+        }
+        console.log(eventsidarr);
+      }
       }
     }
   };
