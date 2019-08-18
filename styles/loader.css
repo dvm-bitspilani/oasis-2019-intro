@@ -28,6 +28,7 @@
     min-width: 500px;
     margin-bottom: 50px;
     visibility: hidden;
+    display: none;
 }
 
 .loader>div:nth-of-type(2) {
@@ -36,6 +37,7 @@
     min-width: 500px;
     margin-bottom: 50px;
     visibility: hidden;
+    display: none;
 }
 
 .loader>div:nth-of-type(3) {
@@ -44,6 +46,7 @@
     min-width: 500px;
     margin-bottom: 50px;
     visibility: hidden;
+    display: none;
 }
 
 .loader>div:nth-of-type(4) {
