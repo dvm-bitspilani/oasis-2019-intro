@@ -205,15 +205,15 @@
         opacity: 0;
     }
     .navigation {
-        padding-top: 25vh;
+        padding-top: 20vh;
         padding-left: 15%;
         position: absolute;
         z-index: 20;
         transform: translateX(-100vw);
         transition: 0.5s ease-in-out;
         background: url(../images/Rectangle\ 29.png);
-        width: 85%;
-        height: 75vh;
+        width: 65%;
+        height: 80vh;
         justify-content: flex-start;
         flex-direction: column;
         font-size: 1.4rem;
@@ -225,7 +225,7 @@
         /* height: 15vh; */
         /* position: inherit; */
         left: 5%;
-        top: -1%;
+        top: -2.5%;
         /* margin: auto; */
         margin-top: 1vh;
         background: url(../images/oasis-2.png);
@@ -293,8 +293,8 @@
         width: 35px;
         height: 35px;
         position: absolute;
-        top: 4%;
-        right: 10%;
+        top: 3%;
+        right: 7.5%;
         background: url('../images/menu-back.png');
         background-size: 100% 100%;
         cursor: pointer;
