@@ -156,10 +156,10 @@ select:focus {
 
 .selected-events {
   width: 64%;
-  height: 5%;
+  height: 10%;
   background-color: #02021b;
   padding: 2% 2% 2% 2%;
-  border-radius: 40px;
+  border-radius: 10px;
   border: solid 3px #2263c1;
   color: #cbcbcb;
   font-size: 1em;
@@ -167,6 +167,8 @@ select:focus {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  overflow: scroll;
 
 }
 
@@ -184,6 +186,7 @@ select:focus {
   border: solid 1px #2263c1;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  margin: 2px;
 }
 
 .textarea-type:focus {
@@ -258,6 +261,9 @@ select:focus {
   }
   .back-btn {
     display: none;
+  }
+  .selected-events{
+    font-size: 0.7em;
   }
 }
 
