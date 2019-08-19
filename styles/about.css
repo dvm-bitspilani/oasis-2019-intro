@@ -48,7 +48,7 @@
 
 .about-text {
     grid-row-start: 4;
-    font-family: 'Bitter', serif;    
+    font-family: 'Bitter', serif;
     font-size: 23px;
     line-height: 35px;
     word-spacing: 2px;
@@ -108,7 +108,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: url("../../images/2.png");
+    background: url("../../images/about.jpg");
     background-position: center center;
     background-origin: content-box;
     background-size: cover;
@@ -125,8 +125,8 @@
 .flashit {
     -webkit-animation: flash ease-out 7s infinite;
     animation: flash ease-out 7s infinite;
-    -webkit-animation-delay: 5s;
-    animation-delay: 5s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
 }
 
 @-webkit-keyframes flash {
@@ -261,5 +261,11 @@
     .about-text {
         font-size: 13px;
         line-height: 17px;
+    }
+}
+
+@media (max-height: 800px) and (max-width: 1600px) {
+    .about-text {
+        font-size: 1.2rem;
     }
 }

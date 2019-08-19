@@ -62,16 +62,15 @@
 
 .des-card {
     width: 18%;
-    height: 37%;
     background-color: #1b191e;
     border-radius: 10px;
     margin: 0 25px 0 25px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     flex-flow: column;
     position: relative;
     transition: 0.25s ease-in-out;
+    padding-top: 60px;
 }
 
 .des-card .prof-pic {
