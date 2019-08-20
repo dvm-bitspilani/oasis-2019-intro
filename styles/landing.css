@@ -167,6 +167,7 @@
 
 #hamburger {
     display: none;
+    z-index: 19;
 }
 
 @media all and (max-width: 500px) {
