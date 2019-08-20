@@ -23,7 +23,7 @@ body {
   position: absolute;
   height: 50vh;
   width: 50vw;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   margin-top: 10vh;
   left: 50%;
   display: flex;
@@ -37,7 +37,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.msg-box > span{
+.msg-box > span {
   text-align: center;
   color: #ffffff;
   font-size: 0.7em;
@@ -118,7 +118,7 @@ input:focus {
   border-radius: 40px;
 }
 
-.select-wrapper:nth-child(1){
+.select-wrapper:nth-child(1) {
   position: relative;
 }
 
@@ -139,7 +139,7 @@ select:focus {
   outline: none;
 }
 
-.events-input{
+.events-input {
   background-color: #02021b;
   width: 90%;
   padding: 2% 3% 2% 6%;
@@ -151,7 +151,7 @@ select:focus {
   height: 55%;
 }
 
-.events-list{
+.events-list {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -163,7 +163,7 @@ select:focus {
   overflow: scroll;
 }
 
-.events-list > span{
+.events-list > span {
   text-align: start;
   height: 2vh;
   padding: 2% 0 2% 8%;
@@ -172,7 +172,7 @@ select:focus {
   font-size: 1.2em;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .input-el > .radio-inputs {
@@ -208,8 +208,8 @@ select:focus {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  overflow: scroll;
-
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .sports {
@@ -290,15 +290,15 @@ select:focus {
     font-size: 1.2em;
   }
 
-  .events-input{
+  .events-input {
     font-size: 1.2em;
   }
 
-  .events-list{
+  .events-list {
     max-height: 40vh;
   }
 
-  .events-list > span{
+  .events-list > span {
     font-size: 0.9em;
   }
 
@@ -314,7 +314,7 @@ select:focus {
   .back-btn {
     display: none;
   }
-  .selected-events{
+  .selected-events {
     font-size: 0.7em;
   }
 }
@@ -347,15 +347,15 @@ select:focus {
     padding: 3% 12% 3% 12%;
   }
 
-  .events-input{
+  .events-input {
     font-size: 0.7em;
   }
 
-  .events-list{
+  .events-list {
     max-height: 40vh;
   }
 
-  .events-list > span{
+  .events-list > span {
     font-size: 0.7em;
   }
 }

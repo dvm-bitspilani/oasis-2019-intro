@@ -15,7 +15,12 @@
   </head>
   <body>
     <div class="msg-box">
-      <span class="inner-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit suscipit quaerat unde magni architecto adipisci blanditiis, necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit assumenda quod rerum, minus explicabo consectetur!</span>
+      <span class="inner-text"
+        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit
+        suscipit quaerat unde magni architecto adipisci blanditiis,
+        necessitatibus distinctio molestiae. Ea amet fugiat ullam suscipit
+        assumenda quod rerum, minus explicabo consectetur!</span
+      >
       <div class="close-box" onclick="closebox()">OK</div>
     </div>
     <div class="form-div">
@@ -35,33 +40,6 @@
               <option value="">Select your College</option>
             </select>
           </div>
-
-          <!-- <div class="radio-inputs">
-            <span>Gender *</span>
-            <br />
-            <div class="radio-buttons">
-              <input type="radio" value="M" name="gender" />
-              <label for="male">Male</label>
-              <input type="radio" value="F" name="gender" />
-              <label for="female">Femlae</label>
-              <input type="radio" value="O" name="gender" />
-              <label for="others">Others</label>
-            </div>
-          </div> -->
-          <!-- <div class="radio-inputs">
-            <span>Year of Study *</span>
-            <br />
-            <div class="radio-buttons">
-              <input type="radio" value="1" name="yos" />
-              <label for="male">1</label>
-              <input type="radio" value="2" name="yos" />
-              <label for="female">2</label>
-              <input type="radio" value="3" name="yos" />
-              <label for="others">3</label>
-              <input type="radio" value="4" name="yos" />
-              <label for="others">4</label>
-            </div>
-          </div> -->
           <div class="select-wrapper">
             <select
               id="gender_opt"
@@ -82,7 +60,7 @@
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
-          </select>
+            </select>
           </div>
 
           <input type="text" placeholder="City *" class="text-type" id="city" />
@@ -92,14 +70,18 @@
             <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
             <option value="" selected disabled>Select your Events</option>
             </select> -->
-            <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onkeyup="filterFunction()"/>
-            <div class="events-list">
-              
-            </div>
-        </div>
-        <div class="selected-events">
-        </div>
-        <input
+            <input
+              type="text"
+              placeholder="Select your events"
+              class="events-input"
+              id="events_input"
+              onclick="displaylist()"
+              onkeyup="filterFunction()"
+            />
+            <div class="events-list"></div>
+          </div>
+          <div class="selected-events"></div>
+          <input
             type="email"
             placeholder="Email *"
             class="text-type"
@@ -111,7 +93,10 @@
             class="text-type"
             id="phone"
           />
-          <div class="g-recaptcha" data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"></div>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Ld2H7MUAAAAAK2aN05UrQYmmOPLkQ9d7VFHz-_-"
+          ></div>
         </div>
       </div>
       <span class="register" onclick="prereg()">Register</span>
