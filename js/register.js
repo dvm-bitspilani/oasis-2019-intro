@@ -2,9 +2,9 @@ var textarea = document.getElementById("textarea_type");
 var eventlist = document.getElementsByClassName("events_el");
 var msg_box = document.getElementsByClassName("msg-box")[0];
 var close_box = document.getElementsByClassName("close-box")[0];
-var selected_events = document.getElementsByClassName('selected-events')[0];
-var eventsinput = document.getElementById('events_input');
-var appendevent = document.getElementsByClassName('events-list')[0];
+var selected_events = document.getElementsByClassName("selected-events")[0];
+var eventsinput = document.getElementById("events_input");
+var appendevent = document.getElementsByClassName("events-list")[0];
 var eventsidarr = [];
 var collegeid;
 var gender_value;
@@ -17,14 +17,13 @@ var display = true;
 //   console.log(1);
 // }
 
-function displaylist(){
-  if(display ==true){
-    document.getElementsByClassName('events-list')[0].style.display = 'flex';
+function displaylist() {
+  if (display == true) {
+    document.getElementsByClassName("events-list")[0].style.display = "flex";
     display = false;
     console.log(display);
-  }
-  else if(display == false){
-    document.getElementsByClassName('events-list')[0].style.display = 'none';
+  } else if (display == false) {
+    document.getElementsByClassName("events-list")[0].style.display = "none";
     display = true;
   }
 }
@@ -44,8 +43,6 @@ function filterFunction() {
   }
 }
 
-
-
 function geteventsvalue() {
   const val = document.getElementById("events_opt").value;
   const sports_id = document.getElementById("events_opt")[
@@ -60,23 +57,33 @@ function geteventsvalue() {
   selected_events.appendChild(div);
   div.onclick = function() {
     this.parentNode.removeChild(this);
-    const x = this.getElementsByTagName('span');
+    const x = this.getElementsByTagName("span");
     console.log(x[0].innerHTML);
-    console.log(document.getElementsByClassName('sports-tag')[5])
-    for(var i =1;i<document.getElementsByClassName('sports-tag').length;i++){
-      if(x[0].innerHTML == document.getElementsByClassName('sports-tag')[i].innerHTML){
-      document.getElementsByClassName('sports-tag')[i].disabled = false;
-      for(var j = 0;j<eventsidarr.length;j++){
-        if(eventsidarr[j] == parseInt(document.getElementsByClassName('sports-tag')[i].id)){
-          eventsidarr.splice(j,1);
-          j--;
+    console.log(document.getElementsByClassName("sports-tag")[5]);
+    for (
+      var i = 1;
+      i < document.getElementsByClassName("sports-tag").length;
+      i++
+    ) {
+      if (
+        x[0].innerHTML ==
+        document.getElementsByClassName("sports-tag")[i].innerHTML
+      ) {
+        document.getElementsByClassName("sports-tag")[i].disabled = false;
+        for (var j = 0; j < eventsidarr.length; j++) {
+          if (
+            eventsidarr[j] ==
+            parseInt(document.getElementsByClassName("sports-tag")[i].id)
+          ) {
+            eventsidarr.splice(j, 1);
+            j--;
+          }
+          console.log(eventsidarr);
         }
-        console.log(eventsidarr);
-      }
       }
     }
   };
- document.getElementById("events_opt").options[
+  document.getElementById("events_opt").options[
     document.getElementById("events_opt").selectedIndex
   ].disabled = true;
   console.log(val);
@@ -112,41 +119,43 @@ window.onload = function() {
       for (var i = 0; i < response.length; i++) {
         for (var j = 0; j < response[i].events.length; j++) {
           console.log(response[i].events[j].name);
-            var opt = document.createElement("span");
-            opt.innerHTML = response[i].events[j].name;
-            opt.setAttribute("id", response[i].events[j].id);
-            opt.className += 'sports-tag';
-            opt.onclick = function(){
-              console.log(this.innerHTML);
-              console.log(this.id);
-              document.getElementsByClassName('events-list')[0].style.display = 'none';
-              display = true;
-              var div = document.createElement("div");
-              div.className += "sports";
-              var span = document.createElement("span");
-              span.className += "sports-name";
-              span.innerHTML = this.innerHTML;
-              span.setAttribute('id',this.id);
-              div.appendChild(span);
-              div.innerHTML += '<i class="fas fa-times" style="padding-left:1vh;color:red"></i>';
-              selected_events.appendChild(div);
-              eventsidarr.push(parseInt(this.id));
-              div.onclick = function(){
-                const innerspan = this.getElementsByTagName('span');
-                console.log(innerspan[0].id);
-                this.parentNode.removeChild(this);
-                for(var i =0;i<eventsidarr.length;i++){
-                  if(eventsidarr[i] == parseInt(innerspan[0].id)){
-                    eventsidarr.splice(i,1);
-                    i--;
-                  }
-                  console.log(eventsidarr);
+          var opt = document.createElement("span");
+          opt.innerHTML = response[i].events[j].name;
+          opt.setAttribute("id", response[i].events[j].id);
+          opt.className += "sports-tag";
+          opt.onclick = function() {
+            console.log(this.innerHTML);
+            console.log(this.id);
+            document.getElementsByClassName("events-list")[0].style.display =
+              "none";
+            display = true;
+            var div = document.createElement("div");
+            div.className += "sports";
+            var span = document.createElement("span");
+            span.className += "sports-name";
+            span.innerHTML = this.innerHTML;
+            span.setAttribute("id", this.id);
+            div.appendChild(span);
+            div.innerHTML +=
+              '<i class="fas fa-times" style="padding-left:1vh;color:red"></i>';
+            selected_events.appendChild(div);
+            eventsidarr.push(parseInt(this.id));
+            div.onclick = function() {
+              const innerspan = this.getElementsByTagName("span");
+              console.log(innerspan[0].id);
+              this.parentNode.removeChild(this);
+              for (var i = 0; i < eventsidarr.length; i++) {
+                if (eventsidarr[i] == parseInt(innerspan[0].id)) {
+                  eventsidarr.splice(i, 1);
+                  i--;
                 }
+                console.log(eventsidarr);
               }
-              console.log(eventsidarr);
-            }
-            appendevent.appendChild(opt);
-            no_of_events++;
+            };
+            console.log(eventsidarr);
+          };
+          appendevent.appendChild(opt);
+          no_of_events++;
         }
       }
     })
@@ -192,15 +201,14 @@ function prereg() {
   //       yos_value = yos[i].value;
   //     }
   //   }
-  //   console.log(yos_value);
   const city = document.getElementById("city").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   var v = grecaptcha.getResponse();
   console.log(v);
-  if(v == ''){
-    alert('Please select Captcha');
-    return
+  if (v == "") {
+    alert("Please select Captcha");
+    return;
   }
   data = {
     email_id: email,
@@ -211,13 +219,21 @@ function prereg() {
     phone: phone,
     college_id: collegeid,
     events: eventsidarr,
-    captcha : v
+    captcha: v
   };
   console.log(data);
-  if(email==''||name==""||gender_value==null||city==''||yos_value==null||phone==''||collegeid==''||eventsidarr==[]){
-    alert('Please enter all the selected feilds');
-  }
-  else{
+  if (
+    email == "" ||
+    name == "" ||
+    gender_value == null ||
+    city == "" ||
+    yos_value == null ||
+    phone == "" ||
+    collegeid == "" ||
+    eventsidarr == []
+  ) {
+    alert("Please enter all the selected feilds");
+  } else {
     fetch("https://bits-oasis.org/registrations/Register/", {
       method: "post",
       headers: {
@@ -239,6 +255,4 @@ function prereg() {
         console.log(error);
       });
   }
-
-
 }
