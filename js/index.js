@@ -60,6 +60,13 @@ function navigate(x) {
     if (document.documentElement.scrollWidth < 500) {
         closeNav();
     }
+    if(x===0){
+        var navItems = document.getElementsByClassName("nav-item");
+        for(var i=0; i< navItems.length ; i++){
+            navItems[i].style.display = "block";
+        }   
+        navItems[0].style.marginRight="initial";
+    }
 }
 
 function openNav() {
@@ -110,4 +117,13 @@ function openSpons() {
         document.querySelectorAll("#hamburger > div")[2].style.transform = "rotate(0deg)";
         document.querySelectorAll("#hamburger > div")[1].style.opacity = "1";
     }
+    
+    var navItems = document.getElementsByClassName("nav-item");
+    
+    for(var i=0; i< navItems.length ; i++){
+        navItems[i].style.display = "none";
+    }
+    navItems[0].style.display="block";
+    navItems[0].style.marginRight="8vw";
+    
 }
