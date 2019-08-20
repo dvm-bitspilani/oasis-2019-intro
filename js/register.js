@@ -3,16 +3,48 @@ var eventlist = document.getElementsByClassName("events_el");
 var msg_box = document.getElementsByClassName("msg-box")[0];
 var close_box = document.getElementsByClassName("close-box")[0];
 var selected_events = document.getElementsByClassName('selected-events')[0];
+var eventsinput = document.getElementById('events_input');
+var appendevent = document.getElementsByClassName('events-list')[0];
 var eventsidarr = [];
 var collegeid;
 var gender_value;
 var yos;
 var i = 0;
 var no_of_events;
+var display = true;
 
 // document.getElementsByClassName('selected_el')[0].onclick = function() {
 //   console.log(1);
 // }
+
+function displaylist(){
+  if(display ==true){
+    document.getElementsByClassName('events-list')[0].style.display = 'flex';
+    display = false;
+    console.log(display);
+  }
+  else if(display == false){
+    document.getElementsByClassName('events-list')[0].style.display = 'none';
+    display = true;
+  }
+}
+
+function filterFunction() {
+  var input, filter, a, i;
+  input = document.getElementById("events_input");
+  filter = input.value.toUpperCase();
+  a = appendevent.getElementsByTagName("span");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+
 
 function geteventsvalue() {
   const val = document.getElementById("events_opt").value;
@@ -80,15 +112,40 @@ window.onload = function() {
       for (var i = 0; i < response.length; i++) {
         for (var j = 0; j < response[i].events.length; j++) {
           console.log(response[i].events[j].name);
-            var opt = document.createElement("option");
-            opt.value = response[i].events[j].name;
+            var opt = document.createElement("span");
             opt.innerHTML = response[i].events[j].name;
             opt.setAttribute("id", response[i].events[j].id);
             opt.className += 'sports-tag';
             opt.onclick = function(){
-              console.log(1);
+              console.log(this.innerHTML);
+              console.log(this.id);
+              document.getElementsByClassName('events-list')[0].style.display = 'none';
+              display = true;
+              var div = document.createElement("div");
+              div.className += "sports";
+              var span = document.createElement("span");
+              span.className += "sports-name";
+              span.innerHTML = this.innerHTML;
+              span.setAttribute('id',this.id);
+              div.appendChild(span);
+              div.innerHTML += '<i class="fas fa-times" style="padding-left:1vh;color:red"></i>';
+              selected_events.appendChild(div);
+              eventsidarr.push(parseInt(this.id));
+              div.onclick = function(){
+                const innerspan = this.getElementsByTagName('span');
+                console.log(innerspan[0].id);
+                this.parentNode.removeChild(this);
+                for(var i =0;i<eventsidarr.length;i++){
+                  if(eventsidarr[i] == parseInt(innerspan[0].id)){
+                    eventsidarr.splice(i,1);
+                    i--;
+                  }
+                  console.log(eventsidarr);
+                }
+              }
+              console.log(eventsidarr);
             }
-            events_select.appendChild(opt);
+            appendevent.appendChild(opt);
             no_of_events++;
         }
       }
@@ -157,25 +214,31 @@ function prereg() {
     captcha : v
   };
   console.log(data);
+  if(email==''||name==""||gender_value==null||city==''||yos_value==null||phone==''||collegeid==''||eventsidarr==[]){
+    alert('Please enter all the selected feilds');
+  }
+  else{
+    fetch("https://bits-oasis.org/registrations/Register/", {
+      method: "post",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(result) {
+        console.log(result.message);
+        document.getElementsByClassName("inner-text")[0].innerHTML =
+          result.message;
+        msg_box.style.transform = "translate(-50%) scale(1)";
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
 
-  fetch("https://bits-oasis.org/registrations/Register/", {
-    method: "post",
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  })
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(result) {
-      console.log(result.message);
-      document.getElementsByClassName("inner-text")[0].innerHTML =
-        result.message;
-      msg_box.style.transform = "translate(-50%) scale(1)";
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
+
 }

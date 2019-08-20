@@ -118,6 +118,10 @@ input:focus {
   border-radius: 40px;
 }
 
+.select-wrapper:nth-child(1){
+  position: relative;
+}
+
 select {
   -webkit-appearance: none;
   border-radius: 40px;
@@ -133,6 +137,42 @@ select {
 
 select:focus {
   outline: none;
+}
+
+.events-input{
+  background-color: #02021b;
+  width: 90%;
+  padding: 2% 3% 2% 6%;
+  border-radius: 40px;
+  border: solid 3px #2263c1;
+  color: #cbcbcb;
+  font-size: 1.4em;
+  font-family: sf-ui;
+  height: 55%;
+}
+
+.events-list{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-height: 70vh;
+  background-color: #02021b;
+  display: none;
+  flex-flow: column;
+  overflow: scroll;
+}
+
+.events-list > span{
+  text-align: start;
+  height: 2vh;
+  padding: 2% 0 2% 8%;
+  color: #cbcbcb;
+  font-family: sf-ui;
+  font-size: 1.2em;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  cursor: pointer; 
 }
 
 .input-el > .radio-inputs {
@@ -250,6 +290,18 @@ select:focus {
     font-size: 1.2em;
   }
 
+  .events-input{
+    font-size: 1.2em;
+  }
+
+  .events-list{
+    max-height: 40vh;
+  }
+
+  .events-list > span{
+    font-size: 0.9em;
+  }
+
   select {
     font-size: 1.2em;
   }
@@ -293,5 +345,17 @@ select:focus {
   }
   .form-div > .register {
     padding: 3% 12% 3% 12%;
+  }
+
+  .events-input{
+    font-size: 0.7em;
+  }
+
+  .events-list{
+    max-height: 40vh;
+  }
+
+  .events-list > span{
+    font-size: 0.7em;
   }
 }

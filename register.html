@@ -89,11 +89,16 @@
         </div>
         <div class="input-el">
           <div class="select-wrapper">
-            <select id="events_opt" class="select-input" onchange="geteventsvalue()">
+            <!-- <select id="events_opt" class="select-input" onchange="geteventsvalue()">
             <option value="" selected disabled>Select your Events</option>
-            </select>
+            </select> -->
+            <input type="text" placeholder="Select your events" class="events-input" id="events_input" onclick="displaylist()" onkeyup="filterFunction()"/>
+            <div class="events-list">
+              
+            </div>
         </div>
-        <div class="selected-events"></div>
+        <div class="selected-events">
+        </div>
         <input
             type="email"
             placeholder="Email *"
