@@ -79,6 +79,10 @@
 .sponsor-card-container .spons-details {
     width: 21.7vw;
     margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sponsor-card-container .spons-details .name {
@@ -88,6 +92,7 @@
     font-family: "Ikaros-Sans";
     text-align: center;
     color: white;
+    margin-top: 3vw;
 }
 
 .sponsor-card-container img {
