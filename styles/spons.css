@@ -13,6 +13,9 @@
     display: none;
 }
 
+.spons-container::-webkit-scrollbar{
+    display: none;
+}
 .spons-heading {
     height: 10vh;
     width: 100%;
