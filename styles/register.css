@@ -204,7 +204,7 @@ select:focus {
   color: #cbcbcb;
   font-size: 1em;
   font-family: sf-ui;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;

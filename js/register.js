@@ -12,6 +12,7 @@ var yos;
 var i = 0;
 var no_of_events;
 var display = true;
+var random = true;
 
 // document.getElementsByClassName('selected_el')[0].onclick = function() {
 //   console.log(1);
@@ -124,6 +125,7 @@ window.onload = function() {
           opt.setAttribute("id", response[i].events[j].id);
           opt.className += "sports-tag";
           opt.onclick = function() {
+            selected_events.style.display = "flex";
             console.log(this.innerHTML);
             console.log(this.id);
             document.getElementsByClassName("events-list")[0].style.display =

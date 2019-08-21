@@ -161,7 +161,7 @@
 .oasis-landing {
     /* background: url("../assets/images/oasist.png") no-repeat center center/cover; */
     width: 70%;
-    height: max-content;
+    height: auto;
     margin-top: 25vh;
 }
 
