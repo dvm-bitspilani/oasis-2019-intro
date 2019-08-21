@@ -1,4 +1,12 @@
-const scroll = ['home', 'about', 'videos', 'contacts']
+const scroll = ['home', 'about', 'videos', 'contacts'];
+
+// document.getElementsByClassName("thumbnail oasis-teaser")[0].addEventListener("click", () => {
+//     window.location.href = "https://www.youtube.com/watch?v=35lWrDmkxko";
+// });
+// document.getElementsByClassName("thumbnail oasis-after-movie")[0].addEventListener("click", () => {
+//     window.location.href = "https://www.youtube.com/watch?v=kw2MVtXWS4o";
+// });
+
 window.onload = function() {
     let loader = document.getElementsByClassName("loader")[0];
     let about = document.getElementsByClassName("about")[0];

@@ -223,15 +223,21 @@
         grid-template-columns: [col-1] 1vw [col-2] auto [col-3] 50vw [col-4] auto [col-5] 1vw [end];
         grid-template-rows: [row-1] 10vh [row-2] 30vw [row-3] 4vw [row-4] auto [row-5] auto [end]; */
     }
-    .cards-container>.cards-left>.thumbnail {
-        /* grid-column-start: col-3;
+    .cards-container .cards-left .thumbnail {
+       height: 18vh; 
+    }
+    .cards-container .cards-right .thumbnail {
+       height: 18vh; 
+    }
+    /* .cards-container>.cards-left>.thumbnail {
+        grid-column-start: col-3;
         grid-column-end: col-4;
         grid-row-start: row-2;
         grid-row-end: row-3;
-        background-color: rgba(255, 255, 255, 0.7); */
+        background-color: rgba(255, 255, 255, 0.7);
         height: auto;
         width: 100%
-    }
+    } */
     .cards-container>.cards-right {
         width: 70%;
         /* display: grid;
@@ -242,15 +248,15 @@
         grid-template-columns: [col-1] 1vw [col-2] auto [col-3] 50vw [col-4] auto [col-5] 1vw [end];
         grid-template-rows: [row-1] 10vh [row-2] 30vw [row-3] 4vw [row-4] auto [row-5] auto [end]; */
     }
-    .cards-container>.cards-right>.thumbnail {
-        /* grid-column-start: col-3;
+    /* .cards-container>.cards-right>.thumbnail {
+        grid-column-start: col-3;
         grid-column-end: col-4;
         grid-row-start: row-2;
         grid-row-end: row-3;
-        background-color: rgba(255, 255, 255, 0.7); */
+        background-color: rgba(255, 255, 255, 0.7);
         height: auto;
         width: 100%
-    }
+    } */
     .cards-container .cards-left .info {
         /* grid-column-start: col-3;
         grid-column-end: col-4;
