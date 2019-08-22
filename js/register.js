@@ -4,7 +4,7 @@ var msg_box = document.getElementsByClassName("msg-box")[0];
 var close_box = document.getElementsByClassName("close-box")[0];
 var selected_events = document.getElementsByClassName("selected-events")[0];
 var eventsinput = document.getElementById("events_input");
-var appendevent = document.getElementsByClassName("events-list")[0];
+var appendevent = document.getElementsByClassName("events-list")[2];
 var eventsidarr = [];
 var collegeid;
 var gender_value;
@@ -12,21 +12,96 @@ var yos;
 var i = 0;
 var no_of_events;
 var display = true;
+var display2 = true;
+var display3 = true;
+var display4 = true;
 var random = true;
+var isChoreo = false;
 
 // document.getElementsByClassName('selected_el')[0].onclick = function() {
 //   console.log(1);
 // }
+console.log(document.getElementsByClassName("events-list"));
 
 function displaylist() {
   if (display == true) {
-    document.getElementsByClassName("events-list")[0].style.display = "flex";
+    document.getElementsByClassName("events-list")[2].style.display = "flex";
     display = false;
-    console.log(display);
   } else if (display == false) {
-    document.getElementsByClassName("events-list")[0].style.display = "none";
+    document.getElementsByClassName("events-list")[2].style.display = "none";
     display = true;
   }
+  console.log(1);
+}
+
+function displaylist2() {
+  if (display2 == true) {
+    document.getElementsByClassName("events-list")[3].style.display = "flex";
+    display2 = false;
+  } else if (display2 == false) {
+    document.getElementsByClassName("events-list")[3].style.display = "none";
+    display2 = true;
+  }
+}
+
+function displaylist3() {
+  if (display3 == true) {
+    document.getElementsByClassName("events-list")[0].style.display = "flex";
+    display3 = false;
+  } else if (display3 == false) {
+    document.getElementsByClassName("events-list")[0].style.display = "none";
+    display3 = true;
+  }
+}
+
+function displaylist4() {
+  if (display4 == true) {
+    document.getElementsByClassName("events-list")[1].style.display = "flex";
+    display4 = false;
+  } else if (display4 == false) {
+    document.getElementsByClassName("events-list")[1].style.display = "none";
+    display4 = true;
+  }
+}
+
+function setchoreovalue() {
+  isChoreo = true;
+  console.log(isChoreo);
+  document.getElementById("choreo_input").placeholder = "Yes";
+  document.getElementsByClassName("events-list")[3].style.display = "none";
+  display2 = true;
+}
+
+function setchoreovalue2() {
+  isChoreo = false;
+  console.log(isChoreo);
+  document.getElementById("choreo_input").placeholder = "No";
+  document.getElementsByClassName("events-list")[3].style.display = "none";
+  display2 = true;
+}
+
+function setgendervalue1() {
+  gender_value = "M";
+  console.log(gender_value);
+  document.getElementById("gender_input").placeholder = "Male";
+  document.getElementsByClassName("events-list")[1].style.display = "none";
+  display4 = true;
+}
+
+function setgendervalue2() {
+  gender_value = "F";
+  console.log(gender_value);
+  document.getElementById("gender_input").placeholder = "Female";
+  document.getElementsByClassName("events-list")[1].style.display = "none";
+  display4 = true;
+}
+
+function setgendervalue3() {
+  gender_value = "O";
+  console.log(gender_value);
+  document.getElementById("gender_input").placeholder = "Others";
+  document.getElementsByClassName("events-list")[1].style.display = "none";
+  display4 = true;
 }
 
 function filterFunction() {
@@ -34,6 +109,23 @@ function filterFunction() {
   input = document.getElementById("events_input");
   filter = input.value.toUpperCase();
   a = appendevent.getElementsByTagName("span");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+function filterFunction2() {
+  var input, filter, a, i;
+  input = document.getElementById("college_input");
+  filter = input.value.toUpperCase();
+  a = document
+    .getElementsByClassName("events-list")[0]
+    .getElementsByTagName("span");
   for (i = 0; i < a.length; i++) {
     txtValue = a[i].textContent || a[i].innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -59,8 +151,6 @@ function geteventsvalue() {
   div.onclick = function() {
     this.parentNode.removeChild(this);
     const x = this.getElementsByTagName("span");
-    console.log(x[0].innerHTML);
-    console.log(document.getElementsByClassName("sports-tag")[5]);
     for (
       var i = 1;
       i < document.getElementsByClassName("sports-tag").length;
@@ -79,7 +169,6 @@ function geteventsvalue() {
             eventsidarr.splice(j, 1);
             j--;
           }
-          console.log(eventsidarr);
         }
       }
     }
@@ -87,10 +176,7 @@ function geteventsvalue() {
   document.getElementById("events_opt").options[
     document.getElementById("events_opt").selectedIndex
   ].disabled = true;
-  console.log(val);
-  console.log(sports_id);
   eventsidarr.push(parseInt(sports_id));
-  console.log(eventsidarr);
 }
 
 window.onload = function() {
@@ -102,12 +188,22 @@ window.onload = function() {
   fetch(URL)
     .then(resp => resp.json())
     .then(function(response) {
-      console.log(response.data);
+      console.log(response);
       for (var i = 0; i < response.data.length; i++) {
-        var opt = document.createElement("option");
-        opt.value = response.data[i].id;
+        var opt = document.createElement("span");
         opt.innerHTML = response.data[i].name;
-        college_select.add(opt);
+        opt.setAttribute("id", response.data[i].id);
+        opt.className += "sports-tag";
+        opt.onclick = function() {
+          document.getElementsByClassName("events-list")[0].style.display =
+            "none";
+          display3 = true;
+          collegeid = parseInt(this.id);
+          console.log(this.id);
+          console.log(collegeid);
+          document.getElementById("college_input").placeholder = this.innerHTML;
+        };
+        document.getElementsByClassName("events-list")[0].appendChild(opt);
       }
     })
     .catch(function(error) {
@@ -116,10 +212,8 @@ window.onload = function() {
   fetch(URL2)
     .then(resp => resp.json())
     .then(function(response) {
-      console.log(response);
       for (var i = 0; i < response.length; i++) {
         for (var j = 0; j < response[i].events.length; j++) {
-          console.log(response[i].events[j].name);
           var opt = document.createElement("span");
           opt.innerHTML = response[i].events[j].name;
           opt.setAttribute("id", response[i].events[j].id);
@@ -128,7 +222,10 @@ window.onload = function() {
             selected_events.style.display = "flex";
             console.log(this.innerHTML);
             console.log(this.id);
-            document.getElementsByClassName("events-list")[0].style.display =
+            document.getElementById(
+              "events_input"
+            ).placeholder = this.innerHTML;
+            document.getElementsByClassName("events-list")[2].style.display =
               "none";
             display = true;
             var div = document.createElement("div");
@@ -221,6 +318,7 @@ function prereg() {
     phone: phone,
     college_id: collegeid,
     events: eventsidarr,
+    isChoreo: isChoreo,
     captcha: v
   };
   console.log(data);

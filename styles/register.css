@@ -116,9 +116,14 @@ input:focus {
   width: 69%;
   height: 12%;
   border-radius: 40px;
+  position: relative;
 }
 
 .select-wrapper:nth-child(1) {
+  position: relative;
+}
+
+.select-wrapper:nth-child(5) {
   position: relative;
 }
 
@@ -160,6 +165,7 @@ select:focus {
   background-color: #02021b;
   display: none;
   flex-flow: column;
+  z-index: 10;
   overflow: scroll;
 }
 
