@@ -63,7 +63,6 @@ function navigate(x) {
         document.getElementsByTagName('html')[0].style.overflow = 'auto';
     }
     // location.hash = scroll[x];
-    console.log(document.documentElement.scrollHeight / x)
     window.scrollTo(0, window.innerHeight * x)
     if (document.documentElement.scrollWidth < 500) {
         closeNav();
