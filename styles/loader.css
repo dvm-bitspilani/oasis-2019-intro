@@ -16,7 +16,7 @@
 .loader {
     width: 75px;
     height: 75px;
-    margin-top: 15%;
+    margin-top: 10%;
     transform: rotate(45deg);
     animation: rot-ld 2s ease-in-out infinite;
 }
