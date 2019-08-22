@@ -318,7 +318,7 @@ function prereg() {
     phone: phone,
     college_id: collegeid,
     events: eventsidarr,
-    isChoreo: isChoreo,
+    choreographer: isChoreo,
     captcha: v
   };
   console.log(data);
