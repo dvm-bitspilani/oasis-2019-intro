@@ -110,6 +110,10 @@
     opacity: 0;
 }
 
+.navigation:focus {
+    background: #00ffff;
+}
+
 .close-nav,
 .open-nav {
     display: none;
