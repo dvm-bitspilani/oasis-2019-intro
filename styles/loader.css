@@ -178,7 +178,7 @@
 
 @font-face {
     font-family: "ikaros";
-    src: url("./assets/fonts/Ikaros-Regular.otf");
+    src: url("../fonts/Ikaros-Regular.otf");
 }
 
 #loader-wrapper {
@@ -210,6 +210,7 @@
 #oasis-date,
 #oasis-slogan {
     font-family: "ikaros";
+    font-weight: bold;
 }
 
 #oasis-slogan {
