@@ -61,6 +61,9 @@ function navigate(x) {
         }, 600);
         document.getElementsByTagName('html')[0].style.height = 'initial';
         document.getElementsByTagName('html')[0].style.overflow = 'auto';
+
+        document.getElementById('home').style.opacity = 1;
+        document.getElementById('about').style.opacity = 1;
     }
     // location.hash = scroll[x];
     window.scrollTo(0, window.innerHeight * x)
@@ -111,6 +114,8 @@ window.onbeforeunload = function() {
 
 
 function openSpons() {
+    document.getElementById('home').style.opacity = 0;
+    document.getElementById('about').style.opacity = 0;
     var sponsWrapper = document.getElementsByClassName('spons-wrapper')[0];
     sponsWrapper.style.display = 'block';
     setTimeout(() => {
