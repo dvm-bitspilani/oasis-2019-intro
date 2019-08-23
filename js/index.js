@@ -7,38 +7,38 @@ const scroll = ['home', 'about', 'videos', 'contacts'];
 //     window.location.href = "https://www.youtube.com/watch?v=kw2MVtXWS4o";
 // });
 
-window.onload = function() {
-    let loader = document.getElementsByClassName("loader_wraper")[0];
-    let about = document.getElementsByClassName("about")[0];
-    let landingWrapper = document.getElementsByClassName("landing-wrapper")[0];
-    let navigation = document.getElementsByClassName("navigation")[0];
-    let register = document.getElementsByClassName("mobile-register")[0];
-    landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
-    about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
-    navigation.style.transition = "ease-in-out 0.5s"; // fade-in effect for content on loading
-    register.style.transition = "opacity ease-out 0.5s";
-    document.getElementById('hamburger').style.transition = "opacity ease-out 0.5s";
-    document.getElementsByClassName('mobile-register')[0].style.transition = "opacity ease-out 0.5s";
-    setTimeout(() => {
-        document.getElementsByTagName("body")[0].style.overflowY = "auto";
-        loader.style.display = "none";
-        // document.getElementsByClassName("bottom-div")[0].style.opacity = "1";
-        landingWrapper.style.opacity = 1;
-        about.style.opacity = 1;
-        navigation.style.opacity = 1;
-        register.style.opacity = 1;
-        document.getElementById('hamburger').style.opacity = 1
-        document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
-        document.getElementsByTagName('html')[0].style.overflowY = 'auto';
-        // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
-        // document.getElementsByClassName("sidebar")[0].style.display = "flex";
-        // if (window.innerWidth > 500)
-        //   document.getElementsByClassName("navigator")[0].style.display = "flex";
-        // if (window.innerWidth < 500) {
-        //   document.getElementsByClassName("navigator")[0].style.display = "none";
-        // }
-    }, 4500);
-};
+// window.onload = function() {
+//     let loader = document.getElementById("loader-wrapper");
+//     let about = document.getElementsByClassName("about")[0];
+//     let landingWrapper = document.getElementsByClassName("landing-wrapper")[0];
+//     let navigation = document.getElementsByClassName("navigation")[0];
+//     let register = document.getElementsByClassName("mobile-register")[0];
+//     landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+//     about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+//     navigation.style.transition = "ease-in-out 0.5s"; // fade-in effect for content on loading
+//     register.style.transition = "opacity ease-out 0.5s";
+//     document.getElementById('hamburger').style.transition = "opacity ease-out 0.5s";
+//     document.getElementsByClassName('mobile-register')[0].style.transition = "opacity ease-out 0.5s";
+//     setTimeout(() => {
+//         document.getElementsByTagName("body")[0].style.overflowY = "auto";
+//         loader.style.display = "none";
+//         // document.getElementsByClassName("bottom-div")[0].style.opacity = "1";
+//         landingWrapper.style.opacity = 1;
+//         about.style.opacity = 1;
+//         navigation.style.opacity = 1;
+//         register.style.opacity = 1;
+//         document.getElementById('hamburger').style.opacity = 1
+//         document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
+//         document.getElementsByTagName('html')[0].style.overflowY = 'auto';
+//         // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
+//         // document.getElementsByClassName("sidebar")[0].style.display = "flex";
+//         // if (window.innerWidth > 500)
+//         //   document.getElementsByClassName("navigator")[0].style.display = "flex";
+//         // if (window.innerWidth < 500) {
+//         //   document.getElementsByClassName("navigator")[0].style.display = "none";
+//         // }
+//     }, 4500);
+// };
 
 let hue = 0;
 setInterval(() => {
@@ -134,3 +134,60 @@ function openSpons() {
     navItems[0].style.marginRight = "8vw";
 
 }
+
+
+
+
+"use strict";
+
+// loader
+let loaderWrapper = document.getElementById("loader-wrapper");
+let mainLoader = document.getElementById("main-loader");
+let oasisTitle = document.getElementsByClassName("oasis-li");
+let oasisSlogan = document.getElementById("oasis-slogan");
+let oasisText = document.getElementById("oasis-text");
+let oasisDate = document.getElementById("oasis-date");
+let contentWrapper = document.getElementById("content-wrapper");
+
+let about = document.getElementsByClassName("about")[0];
+let landingWrapper = document.getElementsByClassName("landing-wrapper")[0];
+let navigation = document.getElementsByClassName("navigation")[0];
+let register = document.getElementsByClassName("mobile-register")[0];
+
+landingWrapper.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+about.style.transition = "opacity ease-out 0.5s"; // fade-in effect for content on loading
+navigation.style.transition = "ease-in-out 0.5s"; // fade-in effect for content on loading
+register.style.transition = "opacity ease-out 0.5s";
+document.getElementById('hamburger').style.transition = "opacity ease-out 0.5s";
+document.getElementsByClassName('mobile-register')[0].style.transition = "opacity ease-out 0.5s";
+
+window.onload = function() {
+    for (let i = 0; i < oasisTitle.length; i++)
+        oasisTitle[i].classList.add("title-smoke");
+    oasisSlogan.classList.add("slogan-fade-in");
+    loaderWrapper.classList.add("wrapper-fade-out");
+    mainLoader.classList.add("loader-transition");
+    oasisText.classList.add("text-fade-out");
+    oasisDate.classList.add("text-fade-out");
+
+    setTimeout(function() {
+        loaderWrapper.style.display = "none";
+
+        document.getElementsByTagName("body")[0].style.overflowY = "auto";
+        loaderWrapper.style.display = "none";
+        // document.getElementsByClassName("bottom-div")[0].style.opacity = "1";
+        landingWrapper.style.opacity = 1;
+        about.style.opacity = 1;
+        navigation.style.opacity = 1;
+        register.style.opacity = 1;
+        document.getElementById('hamburger').style.opacity = 1
+        document.getElementsByClassName('mobile-register')[0].style.opacity = 1;
+        document.getElementsByTagName('html')[0].style.overflowY = 'auto';
+        // document.getElementsByClassName("nav-bar")[0].style.display = "flex";
+        // document.getElementsByClassName("sidebar")[0].style.display = "flex";
+        // if (window.innerWidth > 500)
+        //   document.getElementsByClassName("navigator")[0].style.display = "flex";
+        // if (window.innerWidth < 500) {
+        //   document.getElementsByClassName("navigator")[0].style.display = "none";
+    }, 3500);
+};
