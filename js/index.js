@@ -120,9 +120,9 @@ function openSpons() {
     sponsWrapper.style.display = 'block';
     setTimeout(() => {
         sponsWrapper.style.opacity = 1;
+        document.getElementsByTagName('html')[0].style.height = '100vh';
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     }, 100);
-    document.getElementsByTagName('html')[0].style.height = '100vh';
-    document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     if (window.innerWidth < 600) {
         closeNav();
         document.querySelectorAll("#hamburger > div")[0].style.transform = "rotate(0deg)";
