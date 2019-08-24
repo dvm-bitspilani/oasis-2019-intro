@@ -54,6 +54,7 @@
     word-spacing: 2px;
     grid-column-start: 3;
     z-index: 140;
+    overflow: scroll;
 }
 
 #fog {
