@@ -24,15 +24,15 @@ body {
   height: 50vh;
   width: 50vw;
   background-color: rgba(0, 0, 0, 0.9);
-  margin-top: 10vh;
   left: 50%;
+  top: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
   font-family: sf-ui;
   font-size: 2em;
-  transform: translate(-50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
   padding: 0 5% 0 5%;
   transition: all 0.5s ease-in-out;
   z-index: 1000;
@@ -325,6 +325,11 @@ select:focus {
   }
   .selected-events {
     font-size: 0.7em;
+  }
+
+  .msg-box {
+    width: 90vw;
+    height: 40vh;
   }
 }
 
