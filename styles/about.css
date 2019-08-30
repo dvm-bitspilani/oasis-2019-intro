@@ -56,6 +56,13 @@
     z-index: 140;
     overflow-x: hidden;
     overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.about-text::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 #fog {
